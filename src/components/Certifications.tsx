@@ -9,6 +9,8 @@ const Certifications: React.FC = () => {
     { icon: Award, color: 'text-primary' },
     { icon: Globe, color: 'text-accent' },
     { icon: Award, color: 'text-primary' },
+    { icon: Globe, color: 'text-accent' },
+    { icon: Award, color: 'text-primary' },
   ];
 
   return (
