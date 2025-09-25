@@ -111,7 +111,7 @@ All colors MUST be HSL.
   @keyframes fade-up {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -148,10 +148,10 @@ All colors MUST be HSL.
   
   @keyframes floating {
     0%, 100% {
-      transform: translateY(0px);
+      transform: translateY(0px) rotate(0deg);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-15px) rotate(2deg);
     }
   }
   
@@ -160,33 +160,101 @@ All colors MUST be HSL.
       box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
     }
     50% {
-      box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+      box-shadow: 0 0 60px hsl(var(--primary) / 0.7);
+    }
+  }
+
+  @keyframes vite-lines {
+    0% {
+      opacity: 0;
+      transform: scaleX(0) scaleY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scaleX(1) scaleY(0.5);
+    }
+    100% {
+      opacity: 0.7;
+      transform: scaleX(1) scaleY(1);
+    }
+  }
+
+  @keyframes radial-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes magnetic-pull {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-5px) translateX(2px);
+    }
+    75% {
+      transform: translateY(5px) translateX(-2px);
     }
   }
   
   .animate-fade-up {
-    animation: fade-up 0.5s ease-out;
+    animation: fade-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   .animate-fade-in {
-    animation: fade-in 0.5s ease-out;
+    animation: fade-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   .animate-slide-in {
-    animation: slide-in 0.5s ease-out;
+    animation: slide-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   .animate-gradient {
     background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
+    animation: gradient-shift 4s ease infinite;
   }
   
   .animate-floating {
-    animation: floating 6s ease-in-out infinite;
+    animation: floating 8s ease-in-out infinite;
   }
   
   .animate-pulse-glow {
-    animation: pulse-glow 4s ease-in-out infinite;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-vite-lines {
+    animation: vite-lines 2s ease-out forwards;
+  }
+
+  .animate-radial-pulse {
+    animation: radial-pulse 4s ease-in-out infinite;
+  }
+
+  .animate-text-shimmer {
+    background: linear-gradient(90deg, hsl(var(--foreground)) 25%, hsl(var(--primary)) 50%, hsl(var(--foreground)) 75%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: text-shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-magnetic {
+    animation: magnetic-pull 6s ease-in-out infinite;
   }
   
   .background-pattern {
@@ -229,6 +297,37 @@ All colors MUST be HSL.
     }
   }
   
+  /* Vite-inspired effects */
+  .vite-lines {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .vite-lines::before,
+  .vite-lines::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 100vh;
+    background: linear-gradient(transparent, hsl(var(--primary) / 0.3), transparent);
+    transform-origin: center;
+  }
+
+  .vite-lines::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: vite-lines 3s ease-out infinite;
+  }
+
+  .vite-lines::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    animation: vite-lines 3s ease-out infinite;
+    animation-delay: 0.5s;
+  }
+
   /* Utility classes */
   .gradient-primary {
     background: var(--gradient-primary);
@@ -242,12 +341,37 @@ All colors MUST be HSL.
     @apply bg-clip-text text-transparent;
     background: var(--gradient-primary);
   }
+
+  .text-gradient-shimmer {
+    background: linear-gradient(90deg, 
+      hsl(var(--primary)) 0%, 
+      hsl(var(--accent)) 25%, 
+      hsl(var(--primary)) 50%, 
+      hsl(var(--accent)) 75%, 
+      hsl(var(--primary)) 100%);
+    background-size: 200% 100%;
+    @apply bg-clip-text text-transparent;
+    animation: text-shimmer 4s ease-in-out infinite;
+  }
   
   .glass-card {
-    @apply backdrop-blur-sm bg-card/90 border border-border/50;
+    @apply backdrop-blur-lg bg-card/80 border border-border/30;
+    box-shadow: 0 8px 32px 0 hsl(var(--primary) / 0.1);
   }
   
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[var(--shadow-glow)];
+    @apply transition-all duration-500 hover:shadow-[var(--shadow-glow)] hover:scale-105;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .magnetic-hover {
+    @apply transition-all duration-300;
+  }
+
+  .magnetic-hover:hover {
+    animation: magnetic-pull 1s ease-in-out;
   }
 }

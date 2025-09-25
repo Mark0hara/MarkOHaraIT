@@ -37,13 +37,14 @@ const Skills: React.FC = () => {
             return (
               <div 
                 key={key}
-                className="glass-card rounded-lg p-6 hover-glow animate-fade-up"
+                className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group"
+                style={{animationDelay: `${Object.keys(t.skills.categories).indexOf(key) * 0.2}s`}}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg gradient-primary">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
+                    <Icon className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-xl font-semibold">{category.title}</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-gradient-shimmer transition-all duration-300">{category.title}</h3>
                 </div>
                 
                 <div className="space-y-3">
@@ -69,19 +70,20 @@ const Skills: React.FC = () => {
 
         {/* Soft Skills */}
         <div className="mt-12 max-w-3xl mx-auto">
-          <div className="glass-card rounded-lg p-6 hover-glow animate-fade-up">
+          <div className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group" style={{animationDelay: '0.8s'}}>
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg gradient-primary">
-                <Heart className="w-6 h-6 text-primary-foreground" />
+              <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
+                <Heart className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold">{t.skills.soft.title}</h3>
+              <h3 className="text-xl font-semibold group-hover:text-gradient-shimmer transition-all duration-300">{t.skills.soft.title}</h3>
             </div>
             
             <div className="flex flex-wrap gap-3">
               {t.skills.soft.items.map((item, idx) => (
                 <span 
                   key={idx}
-                  className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-up"
+                  style={{animationDelay: `${idx * 0.1}s`}}
                 >
                   {item}
                 </span>
