@@ -66,4 +66,4 @@ Portfolio personal desplegado en Lovable.
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3A7BD5,100:00D2FF&height=120&section=footer"/>
 </p>
-s
+
