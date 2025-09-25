@@ -30,21 +30,21 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
 ### 🔹 [Implementación de Zabbix](https://github.com/Mark0hara/zabbix-project)  
 Sistema de monitoreo en red para detectar fallos y analizar métricas en tiempo real.  
 
-<img src="https://via.placeholder.com/600x300.png?text=Screenshot+Zabbix" width="600"/>  
+<img src="" width="600"/>  
 
 ---
 
 ### 🔹 [ACME Express – Packet Tracer](https://github.com/Mark0hara/acme-express)  
 Topología de red con VLANs, ACLs, NAT/PAT y Syslog.  
 
-<img src="https://via.placeholder.com/600x300.png?text=Packet+Tracer+Lab" width="600"/>  
+<img src="" width="600"/>  
 
 ---
 
 ### 🔹 [Portafolio Web](https://markoharait.lovable.app/)  
 Portfolio personal desplegado en GitHub Pages.  
 
-<img src="https://via.placeholder.com/600x300.png?text=Portfolio+Website" width="600"/>  
+<img src="https://markoharait.lovable.app/" width="600"/>  
 
 ---
 
@@ -60,8 +60,8 @@ Portfolio personal desplegado en GitHub Pages.
 ## 📫 Contacto  
 
 <p align="center">
-  <a href="mailto:marco.jara@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <a href="https://www.linkedin.com/in/markohara"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <a href="marco.antonio.jc2000@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/markoharasba580/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="https://markoharait.lovable.app"><img src="https://img.shields.io/badge/Portfolio-24292e?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
 
