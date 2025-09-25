@@ -30,22 +30,20 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
 ### 🔹 [Implementación de Zabbix](https://github.com/Mark0hara/zabbix-project)  
 Sistema de monitoreo en red para detectar fallos y analizar métricas en tiempo real.  
 
-<img src="" width="600"/>  
-
 ---
 
 ### 🔹 [ACME Express – Packet Tracer](https://github.com/Mark0hara/acme-express)  
 Topología de red con VLANs, ACLs, NAT/PAT y Syslog.  
 
-<img src="" width="600"/>  
 
 ---
 
 ### 🔹 [Portafolio Web](https://markoharait.lovable.app/)  
 Portfolio personal desplegado en GitHub Pages.  
 
-<img src="https://markoharait.lovable.app/" width="600"/>  
-
+<p align="center">
+  <a href="https://markoharait.lovable.app"><img src="https://images.g2crowd.com/uploads/product/image/03c1f82cebedaa47c37976d727ab34f6/lovable.png"></a>
+</p>
 ---
 
 ## 📊 Estadísticas  
