@@ -27,21 +27,21 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
 
 ## 🚀 Proyectos Destacados  
 
-### 🔹 [Implementación de Zabbix](https://github.com/Mark0hara/zabbix-project)  
-Sistema de monitoreo en red para detectar fallos y analizar métricas en tiempo real.  
+### 🔹 [Monitoreo de Infraestructura de Red](https://github.com/Mark0hara/zabbix-project)  
+Solución integral de monitoreo para infraestructura de red usando Python y plataformas cloud.  
 
 ---
 
-### 🔹 [ACME Express – Packet Tracer](https://github.com/Mark0hara/acme-express)  
-Topología de red con VLANs, ACLs, NAT/PAT y Syslog.  
+### 🔹 [Detección de Amenazas de Ciberseguridad](https://github.com/Mark0hara/acme-express)  
+Sistema automatizado de detección de amenazas implementando mejores prácticas de seguridad.  
 
 
 ---
 
 ### 🔹 [Portafolio Web](https://markoharait.lovable.app/)  
-Portfolio personal desplegado en GitHub Pages.  
+Portfolio personal desplegado en Lovable.  
 
-<p align="center">
+<p align="left">
   <a href="https://markoharait.lovable.app"><img src="https://images.g2crowd.com/uploads/product/image/03c1f82cebedaa47c37976d727ab34f6/lovable.png" width="50" height="50"/>
 </p>
 ---
