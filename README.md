@@ -23,8 +23,6 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
   <img src="https://cdn-icons-png.flaticon.com/512/10349/10349752.png" width="50" height="50"/>
 </p>
 
----
-
 ## 🚀 Proyectos Destacados  
 
 ### 🔹 [Monitoreo de Infraestructura de Red](https://github.com/Mark0hara/zabbix-project)  
