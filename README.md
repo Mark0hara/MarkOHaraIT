@@ -61,7 +61,7 @@
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="45" height="45"/>
       </p>
       <p>
-        <strong>Anydesk/TeamViewer • Windows Server • Jira/ServiceNow • Hardware/Software • Linux</strong>
+        <strong>Remote Support • Windows Server • Jira/ServiceNow • Hardware/Software • Linux</strong>
       </p>
     </td>
   </tr>
