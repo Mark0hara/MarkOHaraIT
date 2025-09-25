@@ -55,15 +55,15 @@ export const translations = {
       categories: {
         cybersecurity: {
           title: "Cybersecurity",
-          items: ["Wireshark", "SIEM", "Firewalls", "Documentación técnica"]
+          items: ["Wireshark", "SIEM", "Firewalls", "Technical documentation"]
         },
         cloud: {
-          title: "Cloud & Administration",
+          title: "Cloud & Administration", 
           items: ["AWS", "Docker", "VMware", "M365 Admin", "Zabbix", "Grafana"]
         },
         support: {
           title: "Technical Support",
-          items: ["Soporte remoto", "Windows Server", "Jira", "ServiceNow", "Hardware/Software", "Linux"]
+          items: ["Remote support", "Windows Server", "Jira", "ServiceNow", "Hardware/Software", "Linux"]
         },
         programming: {
           title: "Programming",
@@ -72,7 +72,7 @@ export const translations = {
       },
       soft: {
         title: "Soft Skills",
-        items: ["Resolución de problemas bajo presión", "Pensamiento crítico y analítico", "Comunicación efectiva", "Gestión del tiempo y prioridades", "Trabajo en equipo y colaboración", "Adaptabilidad al cambio", "Atención al detalle", "Liderazgo en proyectos", "Orientación al cliente/usuario interno", "Proactividad y aprendizaje continuo"]
+        items: ["Problem solving under pressure", "Critical and analytical thinking", "Effective communication", "Time management and priorities", "Teamwork and collaboration", "Adaptability to change", "Attention to detail", "Project leadership", "Customer/internal user orientation", "Proactivity and continuous learning"]
       }
     },
     certifications: {
@@ -81,7 +81,7 @@ export const translations = {
         "AWS Certified Cloud Practitioner",
         "Advanced English C1 (EFE SET)",
         "Cybersecurity Bootcamp (Talento Digital)",
-        "Lógica de programación con JavaScript en Alura Latam",
+        "Logic programming with JavaScript at Alura Latam",
         "AWS Academy Graduate - AWS Academy Cloud Architect"
       ]
     },

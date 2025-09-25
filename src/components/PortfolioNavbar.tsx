@@ -39,7 +39,6 @@ const PortfolioNavbar: React.FC = () => {
               Back to Home
             </Button>
             <div className="text-xl font-bold text-gradient">
-              Portfolios
             </div>
           </div>
 
