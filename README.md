@@ -1,6 +1,6 @@
 # Welcome to My Lovable project
 
-## Project info
+## Project infooo
 
 **URL**: https://markoharait.lovable.app/
 
