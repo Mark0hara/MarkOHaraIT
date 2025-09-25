@@ -15,7 +15,7 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
 
 <p align="center">
   <!-- Usa íconos SVG de devicon/simple-icons -->
-  <img src="https://images.ctfassets.net/k428n7s2pxlu/z8Ja8Eq4BlpNQR8OIjquX/ac6846c9e9d625dd3be8fd4d9c36a0e2/AWS_Certification1__1_.jpeg" width="50" height="50"/> 
+  <img src="https://i0.wp.com/www.spideronline.co.uk/wp-content/uploads/2024/11/aws.png?fit=597%2C597&ssl=1" width="50" height="50"/> 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" height="50"/>
