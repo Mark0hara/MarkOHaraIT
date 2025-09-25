@@ -42,7 +42,7 @@ Topología de red con VLANs, ACLs, NAT/PAT y Syslog.
 Portfolio personal desplegado en GitHub Pages.  
 
 <p align="center">
-  <a href="https://markoharait.lovable.app"><img src="https://images.g2crowd.com/uploads/product/image/03c1f82cebedaa47c37976d727ab34f6/lovable.png"></a>
+  <a href="https://markoharait.lovable.app"><img src="https://images.g2crowd.com/uploads/product/image/03c1f82cebedaa47c37976d727ab34f6/lovable.png" width="50" height="50"/>
 </p>
 ---
 
