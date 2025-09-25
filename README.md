@@ -17,11 +17,10 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
   <!-- Usa íconos SVG de devicon/simple-icons -->
   <img src="https://i0.wp.com/www.spideronline.co.uk/wp-content/uploads/2024/11/aws.png?fit=597%2C597&ssl=1" width="50" height="50"/> 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg" width="50" height="50"/>
+  <img src="https://desafiolatam.com/wp-content/uploads/2024/05/cropped-flaticon-latam.png" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="50" height="50"/>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4VOPDsSBOe5Eeqz-4kiwFIcz5VdzzJUaUg&s" width="50" height="50"/>
+  <img src="https://www.shutterstock.com/image-vector/this-flat-logo-that-depicts-600nw-2501691119.jpg" width="50" height="50"/>
 </p>
 
 ---
