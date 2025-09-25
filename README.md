@@ -88,7 +88,7 @@
 
 ## 🚀 Featured Projects  
 
-### 🔹 [Network Infrastructure Monitoring](https://github.com/Mark0hara/zabbix-project)  
+### 🔹 [Network Infrastructure Monitoring](https://github.com/Mark0hara/Network-Infrastructure-Monitoring)  
 Comprehensive monitoring solution for network infrastructure using Python and AWS cloud.  
 
 ### 🔹 [Cybersecurity Threat Detection](https://github.com/Mark0hara/acme-express)  
@@ -108,8 +108,6 @@ Personal portfolio displayed on Lovable.
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mark0hara&layout=compact&theme=tokyonight" height="150" />
 </p>
 
----
-
 ## 📫 Contact  
 
 <p align="center">
@@ -118,7 +116,6 @@ Personal portfolio displayed on Lovable.
   <a href="https://markoharait.lovable.app"><img src="https://img.shields.io/badge/Portfolio-24292e?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
 
----
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3A7BD5,100:00D2FF&height=150&section=footer"/>
