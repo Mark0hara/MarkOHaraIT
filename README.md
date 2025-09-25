@@ -20,7 +20,7 @@ Me apasiona implementar soluciones, optimizar recursos y fortalecer la seguridad
   <img src="https://desafiolatam.com/wp-content/uploads/2024/05/cropped-flaticon-latam.png" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" height="50"/>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4VOPDsSBOe5Eeqz-4kiwFIcz5VdzzJUaUg&s" width="50" height="50"/>
-  <img src="https://www.shutterstock.com/image-vector/this-flat-logo-that-depicts-600nw-2501691119.jpg" width="50" height="50"/>
+  <img src="https://cdn-icons-png.flaticon.com/512/10349/10349752.png" width="50" height="50"/>
 </p>
 
 ---
