@@ -55,24 +55,24 @@ export const translations = {
       categories: {
         cybersecurity: {
           title: "Cybersecurity",
-          items: ["Kaspersky", "SIEM", "Firewalls", "Access Management"]
+          items: ["Wireshark", "SIEM", "Firewalls", "Documentación técnica"]
         },
         cloud: {
           title: "Cloud & Administration",
-          items: ["AWS CloudWatch", "AWS IAM", "Microsoft Azure AD", "Office 365"]
+          items: ["AWS", "Docker", "VMware", "M365 Admin", "Zabbix", "Grafana"]
         },
         support: {
           title: "Technical Support",
-          items: ["Remote Support (Anydesk, TeamViewer)", "Ticket Management", "Hardware & Software", "Linux"]
+          items: ["Soporte remoto", "Windows Server", "Jira", "ServiceNow", "Hardware/Software", "Linux"]
         },
         programming: {
           title: "Programming",
-          items: ["Python (basic)", "MySQL (basic)"]
+          items: ["Python", "MySQL"]
         }
       },
       soft: {
         title: "Soft Skills",
-        items: ["Analytical thinking", "Teamwork", "Adaptability", "Punctuality"]
+        items: ["Resolución de problemas bajo presión", "Pensamiento crítico y analítico", "Comunicación efectiva", "Gestión del tiempo y prioridades", "Trabajo en equipo y colaboración", "Adaptabilidad al cambio", "Atención al detalle", "Liderazgo en proyectos", "Orientación al cliente/usuario interno", "Proactividad y aprendizaje continuo"]
       }
     },
     certifications: {
@@ -80,7 +80,9 @@ export const translations = {
       items: [
         "AWS Certified Cloud Practitioner",
         "Advanced English C1 (EFE SET)",
-        "Cybersecurity Bootcamp (Talento Digital)"
+        "Cybersecurity Bootcamp (Talento Digital)",
+        "Lógica de programación con JavaScript en Alura Latam",
+        "AWS Academy Graduate - AWS Academy Cloud Architect"
       ]
     },
     languages: {
@@ -112,8 +114,8 @@ export const translations = {
           title: "Network Infrastructure Monitoring",
           description: "A comprehensive monitoring solution for network infrastructure using Python and cloud platforms.",
           technologies: ["Python", "AWS CloudWatch", "Network Monitoring"],
-          githubUrl: "https://github.com/marco-jara",
-          status: "In Development"
+          githubUrl: "https://github.com/Mark0hara/Network-Infrastructure-Monitoring",
+          status: "Completed"
         },
         {
           title: "Cybersecurity Threat Detection",
@@ -188,24 +190,24 @@ export const translations = {
       categories: {
         cybersecurity: {
           title: "Ciberseguridad",
-          items: ["Kaspersky", "SIEM", "Firewalls", "Gestión de accesos"]
+          items: ["Wireshark", "SIEM", "Firewalls", "Documentación técnica"]
         },
         cloud: {
           title: "Cloud & Administración",
-          items: ["AWS CloudWatch", "AWS IAM", "Microsoft Azure AD", "Office 365"]
+          items: ["AWS", "Docker", "VMware", "M365 Admin", "Zabbix", "Grafana"]
         },
         support: {
           title: "Soporte Técnico",
-          items: ["Soporte Remoto (Anydesk, TeamViewer)", "Gestión de Tickets", "Hardware y Software", "Linux"]
+          items: ["Soporte remoto", "Windows Server", "Jira", "ServiceNow", "Hardware/Software", "Linux"]
         },
         programming: {
           title: "Programación",
-          items: ["Python (básico)", "MySQL (básico)"]
+          items: ["Python", "MySQL"]
         }
       },
       soft: {
         title: "Habilidades Blandas",
-        items: ["Pensamiento analítico", "Trabajo en equipo", "Adaptabilidad", "Puntualidad"]
+        items: ["Resolución de problemas bajo presión", "Pensamiento crítico y analítico", "Comunicación efectiva", "Gestión del tiempo y prioridades", "Trabajo en equipo y colaboración", "Adaptabilidad al cambio", "Atención al detalle", "Liderazgo en proyectos", "Orientación al cliente/usuario interno", "Proactividad y aprendizaje continuo"]
       }
     },
     certifications: {
@@ -213,7 +215,9 @@ export const translations = {
       items: [
         "AWS Certified Cloud Practitioner",
         "Inglés Avanzado C1 (EFE SET)",
-        "Bootcamp Ciberseguridad (Talento Digital)"
+        "Bootcamp Ciberseguridad (Talento Digital)",
+        "Lógica de programación con JavaScript en Alura Latam",
+        "AWS Academy Graduate - AWS Academy Cloud Architect"
       ]
     },
     languages: {
@@ -245,8 +249,8 @@ export const translations = {
           title: "Monitoreo de Infraestructura de Red",
           description: "Solución integral de monitoreo para infraestructura de red usando Python y plataformas cloud.",
           technologies: ["Python", "AWS CloudWatch", "Monitoreo de Redes"],
-          githubUrl: "https://github.com/marco-jara",
-          status: "En Desarrollo"
+          githubUrl: "https://github.com/Mark0hara/Network-Infrastructure-Monitoring",
+          status: "Completado"
         },
         {
           title: "Detección de Amenazas de Ciberseguridad",

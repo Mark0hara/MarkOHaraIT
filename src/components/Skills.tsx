@@ -15,9 +15,9 @@ const Skills: React.FC = () => {
 
   const skillLevels = {
     cybersecurity: 85,
-    cloud: 80,
-    support: 90,
-    programming: 60,
+    cloud: 90,
+    support: 95,
+    programming: 80,
   };
 
   return (

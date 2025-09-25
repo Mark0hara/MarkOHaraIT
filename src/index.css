@@ -191,24 +191,24 @@ All colors MUST be HSL.
   
   .background-pattern {
     background-image: 
-      radial-gradient(circle at 2px 2px, hsl(221 83% 40%) 1.5px, transparent 0),
-      radial-gradient(circle at 50px 30px, hsl(221 83% 35%) 1.5px, transparent 0),
-      radial-gradient(circle at 120px 80px, hsl(221 83% 45%) 1.5px, transparent 0),
-      radial-gradient(circle at 200px 150px, hsl(221 83% 42%) 1.5px, transparent 0),
-      radial-gradient(circle at 300px 50px, hsl(221 83% 38%) 1.5px, transparent 0),
-      radial-gradient(circle at 400px 200px, hsl(221 83% 40%) 1.5px, transparent 0);
+      radial-gradient(circle at 2px 2px, hsl(221 83% 40%) 3px, transparent 0),
+      radial-gradient(circle at 50px 30px, hsl(221 83% 35%) 3px, transparent 0),
+      radial-gradient(circle at 120px 80px, hsl(221 83% 45%) 3px, transparent 0),
+      radial-gradient(circle at 200px 150px, hsl(221 83% 42%) 3px, transparent 0),
+      radial-gradient(circle at 300px 50px, hsl(221 83% 38%) 3px, transparent 0),
+      radial-gradient(circle at 400px 200px, hsl(221 83% 40%) 3px, transparent 0);
     background-size: 150px 150px, 200px 200px, 250px 250px, 300px 300px, 180px 180px, 220px 220px;
     animation: star-drift 30s linear infinite, star-twinkle 4s ease-in-out infinite alternate;
   }
   
   .dark .background-pattern {
     background-image: 
-      radial-gradient(circle at 2px 2px, hsl(var(--primary) / 0.4) 2px, transparent 0),
-      radial-gradient(circle at 50px 30px, hsl(var(--accent) / 0.3) 2px, transparent 0),
-      radial-gradient(circle at 120px 80px, hsl(var(--primary) / 0.2) 2px, transparent 0),
-      radial-gradient(circle at 200px 150px, hsl(var(--accent) / 0.25) 2px, transparent 0),
-      radial-gradient(circle at 300px 50px, hsl(var(--primary) / 0.3) 2px, transparent 0),
-      radial-gradient(circle at 400px 200px, hsl(var(--accent) / 0.2) 2px, transparent 0);
+      radial-gradient(circle at 2px 2px, hsl(var(--primary) / 0.4) 4px, transparent 0),
+      radial-gradient(circle at 50px 30px, hsl(var(--accent) / 0.3) 4px, transparent 0),
+      radial-gradient(circle at 120px 80px, hsl(var(--primary) / 0.2) 4px, transparent 0),
+      radial-gradient(circle at 200px 150px, hsl(var(--accent) / 0.25) 4px, transparent 0),
+      radial-gradient(circle at 300px 50px, hsl(var(--primary) / 0.3) 4px, transparent 0),
+      radial-gradient(circle at 400px 200px, hsl(var(--accent) / 0.2) 4px, transparent 0);
   }
   
   @keyframes star-drift {
