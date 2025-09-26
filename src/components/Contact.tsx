@@ -8,6 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { logEvent } from 'firebase/analytics';
 import { db, analytics } from '@/lib/firebase'; 
+
 const Contact: React.FC = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
@@ -24,36 +25,29 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Agregar el documento a Firestore
       const docRef = await addDoc(collection(db, 'contacts'), {
         name: formData.name,
         email: formData.email,
         subject: formData.subject,
         message: formData.message,
         timestamp: serverTimestamp(),
-        status: 'new' // Para poder filtrar mensajes nuevos vs leídos
+        status: 'new' 
       });
 
-      // Log del evento en Analytics
       logEvent(analytics, 'form_submit', {
         form_name: 'contact_form',
         success: true
       });
-
-      console.log('Documento escrito con ID: ', docRef.id);
 
       toast({
         title: t.contact.form.success,
         description: 'Tu mensaje ha sido enviado exitosamente.',
       });
 
-      // Limpiar el formulario
       setFormData({ name: '', email: '', subject: '', message: '' });
 
     } catch (error) {
-      console.error('Error al agregar documento: ', error);
       
-      // Log del error en Analytics
       logEvent(analytics, 'form_submit', {
         form_name: 'contact_form',
         success: false,
@@ -77,7 +71,6 @@ const Contact: React.FC = () => {
     }));
   };
 
-  // Función para manejar clics en enlaces sociales con Analytics
   const handleSocialClick = (platform: string, url: string) => {
     logEvent(analytics, 'social_link_click', {
       platform: platform,
