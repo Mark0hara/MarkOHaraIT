@@ -8,7 +8,6 @@ import {
   Code,
   Heart
 } from 'lucide-react';
-import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Skills: React.FC = () => {
@@ -44,8 +43,8 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Technical Skills */}
           {Object.entries(t.skills.technical).slice(1).map(([key, category]) => {
-            const Icon = skillIcons[key as keyof typeof skillIcons];
-            const level = skillLevels[key as keyof typeof skillLevels];
+            const Icon = skillIcons[key as keyof typeof skillIcons] || Code; // Fallback to Code icon
+            const level = skillLevels[key as keyof typeof skillLevels] || 75; // Fallback level
             
             return (
               <div 
