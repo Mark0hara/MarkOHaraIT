@@ -5,7 +5,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
-
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { logEvent } from 'firebase/analytics';
+import { db, analytics } from '@/lib/firebase'; 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
@@ -21,15 +23,51 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Agregar el documento a Firestore
+      const docRef = await addDoc(collection(db, 'contacts'), {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        timestamp: serverTimestamp(),
+        status: 'new' // Para poder filtrar mensajes nuevos vs leídos
+      });
+
+      // Log del evento en Analytics
+      logEvent(analytics, 'form_submit', {
+        form_name: 'contact_form',
+        success: true
+      });
+
+      console.log('Documento escrito con ID: ', docRef.id);
+
       toast({
         title: t.contact.form.success,
-        description: '',
+        description: 'Tu mensaje ha sido enviado exitosamente.',
       });
+
+      // Limpiar el formulario
       setFormData({ name: '', email: '', subject: '', message: '' });
+
+    } catch (error) {
+      console.error('Error al agregar documento: ', error);
+      
+      // Log del error en Analytics
+      logEvent(analytics, 'form_submit', {
+        form_name: 'contact_form',
+        success: false,
+        error: error.message
+      });
+
+      toast({
+        title: 'Error',
+        description: 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.',
+        variant: 'destructive'
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,6 +75,14 @@ const Contact: React.FC = () => {
       ...prev,
       [e.target.name]: e.target.value
     }));
+  };
+
+  // Función para manejar clics en enlaces sociales con Analytics
+  const handleSocialClick = (platform: string, url: string) => {
+    logEvent(analytics, 'social_link_click', {
+      platform: platform,
+      url: url
+    });
   };
 
   return (
@@ -125,7 +171,11 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:marco.antonio.jc2000@gmail.com" className="text-foreground hover:text-primary transition-colors">
+                  <a 
+                    href="mailto:marco.antonio.jc2000@gmail.com" 
+                    className="text-foreground hover:text-primary transition-colors"
+                    onClick={() => handleSocialClick('email', 'marco.antonio.jc2000@gmail.com')}
+                  >
                     marco.antonio.jc2000@gmail.com
                   </a>
                 </div>
@@ -144,6 +194,7 @@ const Contact: React.FC = () => {
                      target="_blank" 
                      rel="noopener noreferrer"
                      className="text-foreground hover:text-primary transition-colors"
+                     onClick={() => handleSocialClick('linkedin', 'https://linkedin.com/in/markoharasba580')}
                    >
                      /in/Mark_O'Hara
                    </a>
@@ -163,6 +214,7 @@ const Contact: React.FC = () => {
                      target="_blank" 
                      rel="noopener noreferrer"
                      className="text-foreground hover:text-primary transition-colors"
+                     onClick={() => handleSocialClick('github', 'https://github.com/Mark0hara/MarkOHaraIT')}
                    >
                      MarkOHaraIT
                    </a>
