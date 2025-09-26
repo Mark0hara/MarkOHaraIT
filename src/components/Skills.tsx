@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Technical Skills */}
-          {Object.entries(t.skills.technical).slice(1).map(([key, category]) => {
+          {Object.entries(t.skills.technical).slice(1).map(([key, category], index) => {
             const Icon = skillIcons[key as keyof typeof skillIcons] || Code; // Fallback to Code icon
             const level = skillLevels[key as keyof typeof skillLevels] || 75; // Fallback level
             
@@ -50,7 +50,7 @@ const Skills: React.FC = () => {
               <div 
                 key={key}
                 className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group"
-                style={{animationDelay: `${Object.keys(t.skills.technical).slice(1).indexOf(key) * 0.2}s`}}
+                style={{animationDelay: `${index * 0.15}s`}}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
@@ -61,14 +61,18 @@ const Skills: React.FC = () => {
                 
                 <div className="space-y-3">
                   {((category as any).items as string[]).map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-accent" />
+                    <div 
+                      key={idx} 
+                      className="flex items-center gap-2 animate-fade-up"
+                      style={{animationDelay: `${index * 0.15 + idx * 0.05}s`}}
+                    >
+                      <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{animationDelay: `${idx * 0.1}s`}} />
                       <span className="text-muted-foreground">{item}</span>
                     </div>
                   ))}
                 </div>
                 
-                <div className="mt-4 space-y-1">
+                <div className="mt-4 space-y-1 animate-fade-up" style={{animationDelay: `${index * 0.15 + 0.3}s`}}>
                    <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Level</span>
                     <span className="text-muted-foreground">{level}%</span>
@@ -76,7 +80,7 @@ const Skills: React.FC = () => {
                   <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
                     <div 
                       className="h-full gradient-primary animate-slide-in transition-all duration-1000 group-hover:animate-pulse-glow" 
-                      style={{width: `${level}%`, animationDelay: `${Object.keys(t.skills.technical).slice(1).indexOf(key) * 0.3 + 0.5}s`}}
+                      style={{width: `${level}%`, animationDelay: `${index * 0.2 + 0.5}s`}}
                     />
                   </div>
                 </div>

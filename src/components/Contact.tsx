@@ -139,14 +139,14 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <a 
-                    href="https://linkedin.com/in/markoharasba580" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors"
-                  >
-                    /in/markoharasba580
-                  </a>
+                   <a 
+                     href="https://linkedin.com/in/markoharasba580" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-foreground hover:text-primary transition-colors"
+                   >
+                     /in/Mark_O'Hara
+                   </a>
                 </div>
               </div>
             </div>
@@ -158,14 +158,14 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">GitHub</p>
-                  <a 
-                    href="https://github.com/Mark0hara/MarkOHaraIT" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors"
-                  >
-                    /Mark0hara/MarkOHaraIT
-                  </a>
+                   <a 
+                     href="https://github.com/Mark0hara/MarkOHaraIT" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-foreground hover:text-primary transition-colors"
+                   >
+                     MarkOHaraIT
+                   </a>
                 </div>
               </div>
             </div>

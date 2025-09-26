@@ -45,8 +45,6 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-      {/* Vite-inspired converging lines */}
-      <div ref={linesRef} className="absolute inset-0 pointer-events-none z-10" />
       
       {/* Enhanced animated background */}
       <div className="absolute inset-0 background-pattern opacity-70" />
@@ -89,7 +87,7 @@ const Hero: React.FC = () => {
               className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 hover-lift magnetic-hover"
             >
               <Linkedin className="w-4 h-4" />
-              LinkedIn
+              /in/Mark_O'Hara
             </a>
             <a href="mailto:marco.antonio.jc2000@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 hover-lift magnetic-hover">
               <Mail className="w-4 h-4" />
@@ -109,7 +107,7 @@ const Hero: React.FC = () => {
               className="gradient-primary hover-glow group relative overflow-hidden"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <span className="relative z-10">
+              <span className="relative z-10 flex items-center">
                 {t.hero.contactMe}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </span>

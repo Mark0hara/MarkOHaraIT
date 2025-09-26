@@ -64,11 +64,11 @@ export const translations = {
         },
         networking: {
           title: "Networks",
-          items: ["TCP/IP", "VPN", "Firewalls", "Network Monitoring", "LAN/WAN"]
+          items: ["Automation", "VPN", "Firewalls", "Network Monitoring", "LAN/WAN"]
         },
         database: {
           title: "Databases",
-          items: ["MySQL", "SQL Server", "Database Administration"]
+          items: ["MySQL", "SQL Server"]
         },
         support: {
           title: "Technical Support",
@@ -213,11 +213,11 @@ export const translations = {
         },
         networking: {
           title: "Redes",
-          items: ["TCP/IP", "VPN", "Firewalls", "Monitoreo de Redes", "LAN/WAN"]
+          items: ["Automatización", "VPN", "Firewalls", "Monitoreo de Redes", "LAN/WAN"]
         },
         database: {
           title: "Bases de Datos",
-          items: ["MySQL", "SQL Server", "Administración BD"]
+          items: ["MySQL", "SQL Server"]
         },
         support: {
           title: "Soporte Técnico",
