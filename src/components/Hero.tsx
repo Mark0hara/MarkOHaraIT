@@ -63,8 +63,6 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-primary/8 rounded-full blur-2xl animate-floating" style={{animationDelay: '6s'}} />
       </div>
 
-      {/* Central glow effect */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-60 animate-pulse-glow z-20" />
       
       <div className="container mx-auto px-4 relative z-30">
         <div className="max-w-4xl mx-auto text-center animate-fade-up">

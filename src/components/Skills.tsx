@@ -1,5 +1,13 @@
 import React from 'react';
-import { Shield, Cloud, Headphones, Code, Heart } from 'lucide-react';
+import { 
+  Cloud, 
+  Shield, 
+  Network, 
+  Database, 
+  Wrench, 
+  Code,
+  Heart
+} from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -7,15 +15,19 @@ const Skills: React.FC = () => {
   const { t } = useLanguage();
 
   const skillIcons = {
-    cybersecurity: Shield,
     cloud: Cloud,
-    support: Headphones,
+    security: Shield,
+    networking: Network,
+    database: Database,
+    support: Wrench,
     programming: Code,
   };
 
   const skillLevels = {
-    cybersecurity: 85,
     cloud: 90,
+    security: 85,
+    networking: 88,
+    database: 82,
     support: 95,
     programming: 80,
   };
@@ -30,7 +42,8 @@ const Skills: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {Object.entries(t.skills.categories).map(([key, category]) => {
+          {/* Technical Skills */}
+          {Object.entries(t.skills.technical).slice(1).map(([key, category]) => {
             const Icon = skillIcons[key as keyof typeof skillIcons];
             const level = skillLevels[key as keyof typeof skillLevels];
             
@@ -38,17 +51,17 @@ const Skills: React.FC = () => {
               <div 
                 key={key}
                 className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group"
-                style={{animationDelay: `${Object.keys(t.skills.categories).indexOf(key) * 0.2}s`}}
+                style={{animationDelay: `${Object.keys(t.skills.technical).slice(1).indexOf(key) * 0.2}s`}}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
                     <Icon className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-gradient-shimmer transition-all duration-300">{category.title}</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-gradient-shimmer transition-all duration-300">{(category as any).title}</h3>
                 </div>
                 
                 <div className="space-y-3">
-                  {category.items.map((item, idx) => (
+                  {((category as any).items as string[]).map((item, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent" />
                       <span className="text-muted-foreground">{item}</span>
@@ -57,11 +70,16 @@ const Skills: React.FC = () => {
                 </div>
                 
                 <div className="mt-4 space-y-1">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Proficiency</span>
-                    <span className="text-primary font-semibold">{level}%</span>
+                   <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">Level</span>
+                    <span className="text-muted-foreground">{level}%</span>
                   </div>
-                  <Progress value={level} className="h-2" />
+                  <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
+                    <div 
+                      className="h-full gradient-primary animate-slide-in transition-all duration-1000 group-hover:animate-pulse-glow" 
+                      style={{width: `${level}%`, animationDelay: `${Object.keys(t.skills.technical).slice(1).indexOf(key) * 0.3 + 0.5}s`}}
+                    />
+                  </div>
                 </div>
               </div>
             );

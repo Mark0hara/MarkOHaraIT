@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Mail, Linkedin } from 'lucide-react';
+import { Send, Mail, Linkedin, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -146,6 +146,25 @@ const Contact: React.FC = () => {
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     /in/markoharasba580
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-lg p-6 hover-glow">
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-lg gradient-primary">
+                  <Github className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">GitHub</p>
+                  <a 
+                    href="https://github.com/Mark0hara/MarkOHaraIT" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    /Mark0hara/MarkOHaraIT
                   </a>
                 </div>
               </div>

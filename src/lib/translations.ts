@@ -48,22 +48,31 @@ export const translations = {
       degree: "Telecommunications, Connectivity and Network Engineering",
       university: "INACAP TECHNOLOGICAL UNIVERSITY",
       location: "Santiago, Center",
-      period: "2019 – 2023 | Graduated"
+      period: "2018 – 2023"
     },
     skills: {
-      title: "Technical Skills",
-      categories: {
-        cybersecurity: {
-          title: "Cybersecurity",
-          items: ["Wireshark", "SIEM", "Firewalls", "Technical documentation"]
-        },
+      title: "Skills",
+      technical: {
+        title: "Technical Skills",
         cloud: {
-          title: "Cloud & Administration", 
-          items: ["AWS", "Docker", "VMware", "M365 Admin", "Zabbix", "Grafana"]
+          title: "Cloud Platforms",
+          items: ["AWS", "Microsoft Azure", "Google Cloud Platform"]
+        },
+        security: {
+          title: "Cybersecurity",
+          items: ["Kaspersky", "Vulnerability Analysis", "Security Policies", "Incident Response"]
+        },
+        networking: {
+          title: "Networks",
+          items: ["TCP/IP", "VPN", "Firewalls", "Network Monitoring", "LAN/WAN"]
+        },
+        database: {
+          title: "Databases",
+          items: ["MySQL", "SQL Server", "Database Administration"]
         },
         support: {
           title: "Technical Support",
-          items: ["Remote support", "Windows Server", "Jira", "ServiceNow", "Hardware/Software", "Linux"]
+          items: ["Remote Support", "Windows Server", "Jira", "ServiceNow", "Hardware/Software", "Linux"]
         },
         programming: {
           title: "Programming",
@@ -72,7 +81,7 @@ export const translations = {
       },
       soft: {
         title: "Soft Skills",
-        items: ["Problem solving under pressure", "Critical and analytical thinking", "Effective communication", "Time management and priorities", "Teamwork and collaboration", "Adaptability to change", "Attention to detail", "Project leadership", "Customer/internal user orientation", "Proactivity and continuous learning"]
+        items: ["Problem solving under pressure", "Critical and analytical thinking", "Effective communication", "Time and priority management", "Teamwork and collaboration", "Adaptability to change", "Attention to detail", "Project leadership", "Customer/internal user orientation", "Proactivity and continuous learning"]
       }
     },
     certifications: {
@@ -80,8 +89,8 @@ export const translations = {
       items: [
         "AWS Certified Cloud Practitioner",
         "Advanced English C1 (EFE SET)",
-        "Cybersecurity Bootcamp (Talento Digital)",
-        "Logic programming with JavaScript at Alura Latam",
+        "Cybersecurity Bootcamp (Digital Talent)",
+        "Programming Logic with JavaScript at Alura Latam",
         "AWS Academy Graduate - AWS Academy Cloud Architect"
       ]
     },
@@ -109,6 +118,11 @@ export const translations = {
     portfolios: {
       title: "My Projects",
       subtitle: "A collection of projects that showcase my skills and experience in telecommunications, network engineering, and cybersecurity.",
+      cta: {
+        title: "Let's Build Something Together",
+        subtitle: "I'm always open to collaborating on interesting projects and exploring new opportunities.",
+        button: "Get In Touch"
+      },
       projects: [
         {
           title: "Network Infrastructure Monitoring",
@@ -181,20 +195,29 @@ export const translations = {
     education: {
       title: "Educación",
       degree: "Ingeniería en Telecomunicaciones, Conectividad y Redes",
-      university: "UNIVERSIDAD TECNOLOGICA INACAP",
-      location: "Santiago Centro",
-      period: "2019 – 2023 | Titulado"
+      university: "UNIVERSIDAD TECNOLÓGICA INACAP",
+      location: "Santiago, Centro",
+      period: "2018 – 2023"
     },
     skills: {
-      title: "Habilidades Técnicas",
-      categories: {
-        cybersecurity: {
-          title: "Ciberseguridad",
-          items: ["Wireshark", "SIEM", "Firewalls", "Documentación técnica"]
-        },
+      title: "Habilidades",
+      technical: {
+        title: "Habilidades Técnicas",
         cloud: {
-          title: "Cloud & Administración",
-          items: ["AWS", "Docker", "VMware", "M365 Admin", "Zabbix", "Grafana"]
+          title: "Plataformas Cloud",
+          items: ["AWS", "Microsoft Azure", "Google Cloud Platform"]
+        },
+        security: {
+          title: "Ciberseguridad",
+          items: ["Kaspersky", "Análisis Vulnerabilidades", "Políticas Seguridad", "Respuesta Incidentes"]
+        },
+        networking: {
+          title: "Redes",
+          items: ["TCP/IP", "VPN", "Firewalls", "Monitoreo de Redes", "LAN/WAN"]
+        },
+        database: {
+          title: "Bases de Datos",
+          items: ["MySQL", "SQL Server", "Administración BD"]
         },
         support: {
           title: "Soporte Técnico",
@@ -244,6 +267,11 @@ export const translations = {
     portfolios: {
       title: "Mis Proyectos",
       subtitle: "Una colección de proyectos que demuestran mis habilidades y experiencia en telecomunicaciones, ingeniería de redes y ciberseguridad.",
+      cta: {
+        title: "Construyamos Algo Juntos",
+        subtitle: "Siempre estoy abierto a colaborar en proyectos interesantes y explorar nuevas oportunidades.",
+        button: "Conectemos"
+      },
       projects: [
         {
           title: "Monitoreo de Infraestructura de Red",
