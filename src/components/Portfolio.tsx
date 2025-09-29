@@ -59,7 +59,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {t.portfolios.projects.map((project, index) => (
             <Card 
               key={index} 
@@ -120,42 +120,6 @@ const Portfolio: React.FC = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto hover-glow">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
-              {t.portfolios.cta.title}
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              {t.portfolios.cta.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="gradient-primary hover-glow group"
-                onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                <span className="group-hover:scale-110 transition-transform duration-300">
-                  {t.portfolios.cta.button}
-                </span>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="hover-glow group"
-                onClick={() => {
-                  window.open('https://github.com/Mark0hara/MarkOHaraIT', '_blank');
-                }}
-              >
-                <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                MarkOHaraIT
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
