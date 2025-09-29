@@ -5,6 +5,7 @@ import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import Certifications from '@/components/Certifications';
+import Portfolio from '@/components/Portfolio';
 import Contact from '@/components/Contact';
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
       <Education />
       <Skills />
       <Certifications />
+      <Portfolio />
       <Contact />
     </div>
   );
