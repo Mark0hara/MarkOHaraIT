@@ -9,9 +9,11 @@ import {
   Heart
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
+  const titleAnimation = useScrollAnimation();
 
   const skillIcons = {
     cloud: Cloud,
@@ -34,7 +36,10 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 
+          ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}
+          className={`text-3xl md:text-4xl font-bold text-center mb-12 scroll-animate ${titleAnimation.isVisible ? 'visible' : ''}`}
+        >
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.skills.title}
           </span>
@@ -43,14 +48,16 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Technical Skills */}
           {Object.entries(t.skills.technical).slice(1).map(([key, category], index) => {
-            const Icon = skillIcons[key as keyof typeof skillIcons] || Code; // Fallback to Code icon
-            const level = skillLevels[key as keyof typeof skillLevels] || 75; // Fallback level
+            const Icon = skillIcons[key as keyof typeof skillIcons] || Code;
+            const level = skillLevels[key as keyof typeof skillLevels] || 75;
+            const cardAnimation = useScrollAnimation();
             
             return (
               <div 
                 key={key}
-                className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group"
-                style={{animationDelay: `${index * 0.15}s`}}
+                ref={cardAnimation.ref as React.RefObject<HTMLDivElement>}
+                className={`glass-card rounded-lg p-6 card-hover scroll-scale group ${cardAnimation.isVisible ? 'visible' : ''}`}
+                style={{transitionDelay: `${index * 0.1}s`}}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
@@ -91,7 +98,13 @@ const Skills: React.FC = () => {
 
         {/* Soft Skills */}
         <div className="mt-12 max-w-3xl mx-auto">
-          <div className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group" style={{animationDelay: '0.8s'}}>
+          {(() => {
+            const softSkillsAnimation = useScrollAnimation();
+            return (
+              <div 
+                ref={softSkillsAnimation.ref as React.RefObject<HTMLDivElement>}
+                className={`glass-card rounded-lg p-6 card-hover group scroll-scale ${softSkillsAnimation.isVisible ? 'visible' : ''}`}
+              >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
                 <Heart className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
@@ -111,6 +124,8 @@ const Skills: React.FC = () => {
               ))}
             </div>
           </div>
+            );
+          })()}
         </div>
       </div>
     </section>

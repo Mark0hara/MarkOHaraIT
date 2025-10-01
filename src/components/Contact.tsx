@@ -7,11 +7,14 @@ import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { logEvent } from 'firebase/analytics';
-import { db, analytics } from '@/lib/firebase'; 
+import { db, analytics } from '@/lib/firebase';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
+  const titleAnimation = useScrollAnimation();
+  const formAnimation = useScrollAnimation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -89,7 +92,10 @@ const Contact: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h2 
+          ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}
+          className={`text-3xl md:text-4xl font-bold text-center mb-4 scroll-animate ${titleAnimation.isVisible ? 'visible' : ''}`}
+        >
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.contact.title}
           </span>
@@ -100,7 +106,10 @@ const Contact: React.FC = () => {
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <div className="glass-card rounded-lg p-6 md:p-8 hover-glow animate-fade-up">
+          <div 
+            ref={formAnimation.ref as React.RefObject<HTMLDivElement>}
+            className={`glass-card rounded-lg p-6 md:p-8 card-hover scroll-scale ${formAnimation.isVisible ? 'visible' : ''}`}
+          >
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input
                 type="text"
@@ -141,7 +150,7 @@ const Contact: React.FC = () => {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full gradient-primary hover-glow"
+                className="w-full gradient-primary btn-hover-effect transition-all duration-300 hover:-translate-y-1"
               >
                 {isSubmitting ? (
                   t.contact.form.sending
@@ -156,8 +165,14 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <div className="glass-card rounded-lg p-6 hover-glow">
+          <div className="space-y-6">
+            {(() => {
+              const emailAnimation = useScrollAnimation();
+              return (
+                <div 
+                  ref={emailAnimation.ref as React.RefObject<HTMLDivElement>}
+                  className={`glass-card rounded-lg p-6 card-hover scroll-scale ${emailAnimation.isVisible ? 'visible' : ''}`}
+                >
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-lg gradient-primary">
                   <Mail className="w-6 h-6 text-primary-foreground" />
@@ -174,8 +189,17 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
+              );
+            })()}
 
-            <div className="glass-card rounded-lg p-6 hover-glow">
+            {(() => {
+              const linkedinAnimation = useScrollAnimation();
+              return (
+                <div 
+                  ref={linkedinAnimation.ref as React.RefObject<HTMLDivElement>}
+                  className={`glass-card rounded-lg p-6 card-hover scroll-scale ${linkedinAnimation.isVisible ? 'visible' : ''}`}
+                  style={{transitionDelay: '0.1s'}}
+                >
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-lg gradient-primary">
                   <Linkedin className="w-6 h-6 text-primary-foreground" />
@@ -194,8 +218,17 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
+              );
+            })()}
 
-            <div className="glass-card rounded-lg p-6 hover-glow">
+            {(() => {
+              const githubAnimation = useScrollAnimation();
+              return (
+                <div 
+                  ref={githubAnimation.ref as React.RefObject<HTMLDivElement>}
+                  className={`glass-card rounded-lg p-6 card-hover scroll-scale ${githubAnimation.isVisible ? 'visible' : ''}`}
+                  style={{transitionDelay: '0.2s'}}
+                >
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-lg gradient-primary">
                   <Github className="w-6 h-6 text-primary-foreground" />
@@ -214,6 +247,8 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
+              );
+            })()}
           </div>
         </div>
       </div>

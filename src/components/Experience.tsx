@@ -1,26 +1,35 @@
 import React from 'react';
 import { Briefcase, MapPin, Calendar, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Experience: React.FC = () => {
   const { t } = useLanguage();
+  const titleAnimation = useScrollAnimation();
 
   return (
     <section id="experience" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 
+          ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}
+          className={`text-3xl md:text-4xl font-bold text-center mb-12 scroll-animate ${titleAnimation.isVisible ? 'visible' : ''}`}
+        >
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.experience.title}
           </span>
         </h2>
 
         <div className="max-w-4xl mx-auto space-y-8">
-          {t.experience.jobs.map((job, index) => (
-            <div 
-              key={index}
-              className="glass-card rounded-lg p-6 md:p-8 hover-glow animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+          {t.experience.jobs.map((job, index) => {
+            const cardAnimation = useScrollAnimation();
+            
+            return (
+              <div 
+                key={index}
+                ref={cardAnimation.ref as React.RefObject<HTMLDivElement>}
+                className={`glass-card rounded-lg p-6 md:p-8 card-hover scroll-animate ${cardAnimation.isVisible ? 'visible' : ''}`}
+                style={{ transitionDelay: `${index * 0.1}s` }}
+              >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
@@ -52,7 +61,8 @@ const Experience: React.FC = () => {
                 ))}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
