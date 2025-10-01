@@ -114,7 +114,7 @@ Personal portfolio displayed on Lovable.
   <a href="https://gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-marco.antonio.jc2000@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white">
   <a href="https://www.linkedin.com/in/markoharasba580/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="https://markoharait.lovable.app"><img src="https://img.shields.io/badge/Portfolio-24292e?style=for-the-badge&logo=githubpages&logoColor=white"></a>
+  <a href="https://mark-o-hara-it.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-24292e?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
 
 
