@@ -232,6 +232,15 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   
   .animate-fade-up {
     animation: fade-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -309,6 +318,18 @@ All colors MUST be HSL.
   .scroll-scale.visible {
     opacity: 1;
     transform: scale(1);
+  }
+
+  .animate-wave {
+    animation: wave 8s linear infinite;
+  }
+
+  .animate-wave-slow {
+    animation: wave 10s linear infinite;
+  }
+
+  .animate-wave-slower {
+    animation: wave 12s linear infinite;
   }
   
   .background-pattern {

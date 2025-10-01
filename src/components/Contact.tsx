@@ -9,6 +9,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { logEvent } from 'firebase/analytics';
 import { db, analytics } from '@/lib/firebase';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import AnimatedWaves from '@/components/AnimatedWaves';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
@@ -89,6 +90,11 @@ const Contact: React.FC = () => {
       <div className="absolute inset-0 opacity-40 dark:opacity-30">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-floating" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-floating" style={{animationDelay: '3s'}} />
+      </div>
+      
+      {/* Animated Waves */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <AnimatedWaves />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
