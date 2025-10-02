@@ -23,11 +23,11 @@ const Skills: React.FC = () => {
   };
 
   const skillLevels = {
-    cloud: 90,
-    security: 85,
-    networking: 88,
-    database: 82,
-    support: 95,
+    cloud: 95,
+    security: 90,
+    networking: 90,
+    database: 80,
+    support: 90,
     programming: 80,
   };
 
