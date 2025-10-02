@@ -21,24 +21,26 @@ export const translations = {
       jobs: [
         {
           company: "National Institute of Statistics",
+          companyLogo: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=100&h=100&fit=crop",
           position: "IT Support Manager",
           location: "Santiago, Paseo Bulnes",
           period: "January 2024 – July 2024",
           achievements: [
-            "I led the implementation of mobile devices for the National Census.",
+            "Led the implementation of mobile devices for the National Census 2024.",
             "Provided technical support for notebooks, routers, and mobile devices.",
-            "I coordinated the delivery of equipment and technical documentation, reducing incident resolution times by 30%, resulting in significant savings in operational resources."
+            "Coordinated equipment delivery and technical documentation, reducing incident resolution times by 30%."
           ]
         },
         {
           company: "SC Informática",
+          companyLogo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&h=100&fit=crop",
           position: "Project Management Engineer and IT Administrator",
           location: "Santiago, Macul",
           period: "May 2023 – December 2023",
           achievements: [
-            "I implemented cybersecurity solutions with Kaspersky resulting in the detection and containment of 100% of threats.",
-            "I automated capacity and performance reports in AWS CloudWatch, improving visibility into resource usage and preventing cloud overutilization costs by 20%.",
-            "I optimized the management of Office 365 licenses and accounts, improving operational continuity and reducing access incidents."
+            "Implemented cybersecurity solutions with Kaspersky, achieving 100% threat detection and containment.",
+            "Automated capacity and performance reports in AWS CloudWatch, preventing cloud overutilization costs by 20%.",
+            "Optimized Office 365 license and account management, improving operational continuity."
           ]
         }
       ]
@@ -54,19 +56,19 @@ export const translations = {
       title: "Technical Stack",
       subtitle: "Explore my technical and soft skills • Move the mouse or touch to interact",
       cloud: [
-        { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM' },
+        { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM, Cost Optimization' },
+        { name: 'Cybersecurity', description: 'Kaspersky, Firewalls, IDS/IPS, Vulnerability Analysis' },
+        { name: 'IT Administration', description: 'Windows Server, Active Directory, GPO, Office 365' },
+        { name: 'Python', description: 'Automation, scripting, APIs, AWS Boto3' },
         { name: 'Linux', description: 'Ubuntu, CentOS, Bash scripting, systemd' },
-        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP' },
-        { name: 'Zabbix', description: 'Infrastructure monitoring, alerts, dashboards' },
-        { name: 'Microsoft 365', description: 'Exchange, Teams, SharePoint, Azure AD' },
-        { name: 'Windows Server', description: 'Active Directory, GPO, IIS, DNS' },
+        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP, Routing' },
       ],
       development: [
-        { name: 'Cybersecurity', description: 'Firewalls, IDS/IPS, Vulnerability Analysis' },
+        { name: 'Zabbix', description: 'Infrastructure monitoring, alerts, custom dashboards' },
         { name: 'Virtualization', description: 'VMware, Hyper-V, Docker, Kubernetes' },
-        { name: 'Python', description: 'Automation, scripting, APIs, data processing' },
-        { name: 'PowerShell', description: 'Windows automation, AD management' },
-        { name: 'ITIL', description: 'IT service management, incident management' },
+        { name: 'PowerShell', description: 'Windows automation, Active Directory management' },
+        { name: 'ITIL', description: 'IT service management, incident & change management' },
+        { name: 'Technical Support', description: 'Ticket management, remote support, hardware/software troubleshooting' },
       ],
       softSkills: [
         { name: 'Leadership', description: 'Team management, decision making' },
@@ -123,11 +125,26 @@ export const translations = {
     certifications: {
       title: "Certifications",
       items: [
-        "AWS Certified Cloud Practitioner",
-        "Advanced English C1 (EFE SET)",
-        "Cybersecurity Bootcamp (Digital Talent)",
-        "Programming Logic with JavaScript at Alura Latam",
-        "AWS Academy Graduate - AWS Academy Cloud Architect"
+        {
+          name: "AWS Certified Cloud Practitioner",
+          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          status: "Completed"
+        },
+        {
+          name: "Advanced English C1 (EF SET)",
+          logo: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=100&h=100&fit=crop",
+          status: "Completed"
+        },
+        {
+          name: "Cybersecurity Bootcamp (Digital Talent)",
+          logo: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=100&h=100&fit=crop",
+          status: "Completed"
+        },
+        {
+          name: "AWS Solutions Architect Associate",
+          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          status: "In Progress"
+        }
       ]
     },
     languages: {
@@ -162,24 +179,31 @@ export const translations = {
       projects: [
         {
           title: "Network Infrastructure Monitoring",
-          description: "A comprehensive monitoring solution for network infrastructure using Python and cloud platforms.",
-          technologies: ["Python", "AWS CloudWatch", "Network Monitoring"],
+          description: "Comprehensive monitoring solution for network infrastructure using Python and cloud platforms.",
+          technologies: ["Python", "AWS CloudWatch"],
           githubUrl: "https://github.com/Mark0hara/Network-Infrastructure-Monitoring",
           status: "Completed"
         },
         {
-          title: "Cybersecurity Threat Detection",
-          description: "Automated threat detection system implementing security best practices.",
-          technologies: ["Kaspersky", "Security Automation", "Threat Analysis"],
+          title: "Cloud Zabbix Monitoring",
+          description: "Zabbix implementation in cloud infrastructure for real-time network monitoring and alerts.",
+          technologies: ["Zabbix", "AWS", "Linux"],
           githubUrl: "https://github.com/marco-jara",
-          status: "Completed"
+          status: "In Progress"
         },
         {
-          title: "Cloud Resource Optimization",
-          description: "AWS resource optimization and cost management automation tools.",
-          technologies: ["AWS", "IAM", "Cost Optimization"],
+          title: "Network Configuration with GNS3",
+          description: "Advanced network topology design and simulation using GNS3 for enterprise environments.",
+          technologies: ["GNS3", "Networking", "Cisco"],
           githubUrl: "https://github.com/marco-jara",
-          status: "Completed"
+          status: "In Progress"
+        },
+        {
+          title: "AWS Automation Scripts",
+          description: "Python scripts for AWS resource automation, monitoring, and cost optimization.",
+          technologies: ["Python", "AWS", "Boto3"],
+          githubUrl: "https://github.com/marco-jara",
+          status: "In Progress"
         }
       ]
     }
@@ -206,24 +230,26 @@ export const translations = {
       jobs: [
         {
           company: "Instituto Nacional de Estadísticas",
+          companyLogo: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=100&h=100&fit=crop",
           position: "Gestor Soporte TI",
           location: "Santiago, Paseo Bulnes",
           period: "Enero 2024 – Julio 2024",
           achievements: [
-            "Lideré la implementación de dispositivos móviles para el Censo Nacional.",
+            "Lideré la implementación de dispositivos móviles para el Censo Nacional 2024.",
             "Brindé soporte técnico para notebooks, routers y equipos móviles.",
-            "Coordiné la entrega de equipos y documentación técnica, reduciendo los tiempos de resolución de incidencias en un 30%, lo que resultó en un ahorro significativo de recursos operativos"
+            "Coordiné la entrega de equipos y documentación técnica, reduciendo tiempos de resolución en 30%."
           ]
         },
         {
           company: "SC Informática",
+          companyLogo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&h=100&fit=crop",
           position: "Ingeniero en Gestión de Proyectos y Administrador TI",
           location: "Santiago, Macul",
           period: "Mayo 2023 – Diciembre 2023",
           achievements: [
-            "Implementé soluciones de ciberseguridad con Kaspersky resultando en la detección y contención del 100% de las amenazas",
-            "Automaticé reportes de capacidad y desempeño en AWS CloudWatch, mejorando la visibilidad del uso de recursos y previniendo costos por sobreuso en la nube en un 20%.",
-            "Optimicé la administración de licencias y cuentas de Office 365, mejorando la continuidad operativa y reduciendo incidencias de acceso."
+            "Implementé soluciones de ciberseguridad con Kaspersky, logrando 100% de detección y contención de amenazas.",
+            "Automaticé reportes de capacidad en AWS CloudWatch, previniendo costos por sobreuso en 20%.",
+            "Optimicé la administración de licencias Office 365, mejorando la continuidad operativa."
           ]
         }
       ]
@@ -239,19 +265,19 @@ export const translations = {
       title: "Stack Tecnológico",
       subtitle: "Explora mis competencias técnicas y blandas • Mueve el mouse o toca para interactuar",
       cloud: [
-        { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM' },
+        { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM, Cost Optimization' },
+        { name: 'Cybersecurity', description: 'Kaspersky, Firewalls, IDS/IPS, Vulnerability Analysis' },
+        { name: 'IT Administration', description: 'Windows Server, Active Directory, GPO, Office 365' },
+        { name: 'Python', description: 'Automation, scripting, APIs, AWS Boto3' },
         { name: 'Linux', description: 'Ubuntu, CentOS, Bash scripting, systemd' },
-        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP' },
-        { name: 'Zabbix', description: 'Monitoreo de infraestructura, alertas, dashboards' },
-        { name: 'Microsoft 365', description: 'Exchange, Teams, SharePoint, Azure AD' },
-        { name: 'Windows Server', description: 'Active Directory, GPO, IIS, DNS' },
+        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP, Routing' },
       ],
       development: [
-        { name: 'Ciberseguridad', description: 'Firewalls, IDS/IPS, Análisis de vulnerabilidades' },
-        { name: 'Virtualización', description: 'VMware, Hyper-V, Docker, Kubernetes' },
-        { name: 'Python', description: 'Automatización, scripting, APIs, data processing' },
-        { name: 'PowerShell', description: 'Automatización Windows, AD management' },
-        { name: 'ITIL', description: 'Gestión de servicios TI, incident management' },
+        { name: 'Zabbix', description: 'Infrastructure monitoring, alerts, custom dashboards' },
+        { name: 'Virtualization', description: 'VMware, Hyper-V, Docker, Kubernetes' },
+        { name: 'PowerShell', description: 'Windows automation, Active Directory management' },
+        { name: 'ITIL', description: 'IT service management, incident & change management' },
+        { name: 'Technical Support', description: 'Ticket management, remote support, hardware/software troubleshooting' },
       ],
       softSkills: [
         { name: 'Liderazgo', description: 'Gestión de equipos, toma de decisiones' },
@@ -308,11 +334,26 @@ export const translations = {
     certifications: {
       title: "Certificaciones",
       items: [
-        "AWS Certified Cloud Practitioner",
-        "Inglés Avanzado C1 (EFE SET)",
-        "Bootcamp Ciberseguridad (Talento Digital)",
-        "Lógica de programación con JavaScript en Alura Latam",
-        "AWS Academy Graduate - AWS Academy Cloud Architect"
+        {
+          name: "AWS Certified Cloud Practitioner",
+          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          status: "Completado"
+        },
+        {
+          name: "Inglés Avanzado C1 (EF SET)",
+          logo: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=100&h=100&fit=crop",
+          status: "Completado"
+        },
+        {
+          name: "Bootcamp Ciberseguridad (Talento Digital)",
+          logo: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=100&h=100&fit=crop",
+          status: "Completado"
+        },
+        {
+          name: "AWS Solutions Architect Associate",
+          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          status: "En Progreso"
+        }
       ]
     },
     languages: {
@@ -348,23 +389,30 @@ export const translations = {
         {
           title: "Monitoreo de Infraestructura de Red",
           description: "Solución integral de monitoreo para infraestructura de red usando Python y plataformas cloud.",
-          technologies: ["Python", "AWS CloudWatch", "Monitoreo de Redes"],
+          technologies: ["Python", "AWS CloudWatch"],
           githubUrl: "https://github.com/Mark0hara/Network-Infrastructure-Monitoring",
           status: "Completado"
         },
         {
-          title: "Detección de Amenazas de Ciberseguridad",
-          description: "Sistema automatizado de detección de amenazas implementando mejores prácticas de seguridad.",
-          technologies: ["Kaspersky", "Automatización de Seguridad", "Análisis de Amenazas"],
+          title: "Monitoreo Zabbix en la Nube",
+          description: "Implementación de Zabbix en infraestructura cloud para monitoreo en tiempo real y alertas de red.",
+          technologies: ["Zabbix", "AWS", "Linux"],
           githubUrl: "https://github.com/marco-jara",
-          status: "Completado"
+          status: "En Progreso"
         },
         {
-          title: "Optimización de Recursos Cloud",
-          description: "Herramientas de automatización para optimización de recursos AWS y gestión de costos.",
-          technologies: ["AWS", "IAM", "Optimización de Costos"],
+          title: "Configuración de Redes con GNS3",
+          description: "Diseño y simulación de topologías de red avanzadas usando GNS3 para entornos empresariales.",
+          technologies: ["GNS3", "Redes", "Cisco"],
           githubUrl: "https://github.com/marco-jara",
-          status: "Completado"
+          status: "En Progreso"
+        },
+        {
+          title: "Scripts de Automatización AWS",
+          description: "Scripts en Python para automatización de recursos AWS, monitoreo y optimización de costos.",
+          technologies: ["Python", "AWS", "Boto3"],
+          githubUrl: "https://github.com/marco-jara",
+          status: "En Progreso"
         }
       ]
     }

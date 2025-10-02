@@ -31,12 +31,14 @@ const Portfolio: React.FC = () => {
     const icons: { [key: string]: string } = {
       'Python': '🐍',
       'AWS': '☁️',
-      'Kaspersky': '🛡️',
-      'MySQL': '🗄️',
-      'JavaScript': '⚡',
-      'React': '⚛️',
-      'Node.js': '🟢',
-      'Docker': '🐳',
+      'AWS CloudWatch': '☁️',
+      'Zabbix': '📊',
+      'Linux': '🐧',
+      'GNS3': '🌐',
+      'Networking': '🔗',
+      'Redes': '🔗',
+      'Cisco': '🔧',
+      'Boto3': '⚙️',
     };
     
     return icons[tech] || '⚙️';
@@ -68,8 +70,8 @@ const Portfolio: React.FC = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Projects Grid - 2x2 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {t.portfolios.projects.map((project, index) => {
             const projectAnimation = useScrollAnimation();
             

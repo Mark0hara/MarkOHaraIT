@@ -30,26 +30,37 @@ const Experience: React.FC = () => {
                 className={`glass-card rounded-lg p-6 md:p-8 card-hover scroll-animate ${cardAnimation.isVisible ? 'visible' : ''}`}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
-                    {job.position}
-                  </h3>
-                  <p className="text-lg font-semibold text-foreground mb-2">
-                    {job.company}
-                  </p>
-                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      {job.location}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {job.period}
-                    </span>
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
+                <div className="flex items-start gap-4 flex-1">
+                  {job.companyLogo && (
+                    <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 border-2 border-primary/20">
+                      <img 
+                        src={job.companyLogo} 
+                        alt={`${job.company} logo`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
+                      {job.position}
+                    </h3>
+                    <p className="text-lg font-semibold text-foreground mb-2">
+                      {job.company}
+                    </p>
+                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4" />
+                        {job.location}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {job.period}
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <Briefcase className="w-8 h-8 text-primary mt-4 md:mt-0" />
+                <Briefcase className="w-8 h-8 text-primary flex-shrink-0" />
               </div>
 
               <div className="space-y-2 mt-4">
