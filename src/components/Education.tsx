@@ -1,30 +1,21 @@
 import React from 'react';
 import { GraduationCap, MapPin, Calendar } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Education: React.FC = () => {
   const { t } = useLanguage();
-  const titleAnimation = useScrollAnimation();
-  const cardAnimation = useScrollAnimation();
 
   return (
     <section className="py-20 bg-secondary/20">
       <div className="container mx-auto px-4">
-        <h2 
-          ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}
-          className={`text-3xl md:text-4xl font-bold text-center mb-12 scroll-animate ${titleAnimation.isVisible ? 'visible' : ''}`}
-        >
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.education.title}
           </span>
         </h2>
 
         <div className="max-w-3xl mx-auto">
-          <div 
-            ref={cardAnimation.ref as React.RefObject<HTMLDivElement>}
-            className={`glass-card rounded-lg p-8 card-hover scroll-scale ${cardAnimation.isVisible ? 'visible' : ''}`}
-          >
+          <div className="glass-card rounded-lg p-8 hover-glow animate-fade-up">
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-lg gradient-primary flex-shrink-0">
                 <GraduationCap className="w-8 h-8 text-primary-foreground" />
