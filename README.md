@@ -94,10 +94,10 @@ Comprehensive monitoring solution for network infrastructure using Python and AW
 ### 🔹 [Cybersecurity Threat Detection](https://github.com/Mark0hara/acme-express)  
 Automated threat detection system implementing security best practices.
 
-###  🔹 [Portfolio Web](https://markoharait.lovable.app/)  
-Personal portfolio displayed on Lovable. 
+###  🔹 [Portfolio Web](https://mark-o-hara-it.vercel.app)  
+Personal portfolio displayed on Vercel and Firebase. 
 <p align="left">
-  <a href="https://markoharait.lovable.app"><img src="https://images.g2crowd.com/uploads/product/image/03c1f82cebedaa47c37976d727ab34f6/lovable.png" width="50" height="50"/>
+  <a href="https://mark-o-hara-it.vercel.app"><img src="https://storage.googleapis.com/gpt-engineer-file-uploads/g4FenlrV2IYKWe4dsJUdtUj0Q8t1/uploads/1758756943031-Imagen%20de%20WhatsApp%202025-06-03%20a%20las%2015.51.18_41022340.jpg" width="50" height="50"/>
 </p>
 
 
