@@ -1,115 +1,40 @@
 import React from 'react';
-import { 
-  Cloud, 
-  Shield, 
-  Network, 
-  Database, 
-  Wrench, 
-  Code,
-  Heart
-} from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import SkillsCloud from './SkillsCloud';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
-
-  const skillIcons = {
-    cloud: Cloud,
-    security: Shield,
-    networking: Network,
-    database: Database,
-    support: Wrench,
-    programming: Code,
-  };
-
-  const skillLevels = {
-    cloud: 95,
-    security: 90,
-    networking: 90,
-    database: 80,
-    support: 90,
-    programming: 80,
-  };
+  const titleAnimation = useScrollAnimation();
 
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 
+          ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}
+          className={`text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 scroll-animate ${titleAnimation.isVisible ? 'visible' : ''}`}
+        >
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.skills.title}
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Technical Skills */}
-          {Object.entries(t.skills.technical).slice(1).map(([key, category], index) => {
-            const Icon = skillIcons[key as keyof typeof skillIcons] || Code; // Fallback to Code icon
-            const level = skillLevels[key as keyof typeof skillLevels] || 75; // Fallback level
-            
-            return (
-              <div 
-                key={key}
-                className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group"
-                style={{animationDelay: `${index * 0.15}s`}}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
-                    <Icon className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
-                  </div>
-                  <h3 className="text-xl font-semibold group-hover:text-gradient-shimmer transition-all duration-300">{(category as any).title}</h3>
-                </div>
-                
-                <div className="space-y-3">
-                  {((category as any).items as string[]).map((item, idx) => (
-                    <div 
-                      key={idx} 
-                      className="flex items-center gap-2 animate-fade-up"
-                      style={{animationDelay: `${index * 0.15 + idx * 0.05}s`}}
-                    >
-                      <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{animationDelay: `${idx * 0.1}s`}} />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="mt-4 space-y-1 animate-fade-up" style={{animationDelay: `${index * 0.15 + 0.3}s`}}>
-                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Level</span>
-                    <span className="text-muted-foreground">{level}%</span>
-                  </div>
-                  <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
-                    <div 
-                      className="h-full gradient-primary animate-slide-in transition-all duration-1000 group-hover:animate-pulse-glow" 
-                      style={{width: `${level}%`, animationDelay: `${index * 0.2 + 0.5}s`}}
-                    />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        {/* 3D Interactive Skills Cloud */}
+        <SkillsCloud />
 
-        {/* Soft Skills */}
-        <div className="mt-12 max-w-3xl mx-auto">
-          <div className="glass-card rounded-lg p-6 hover-glow animate-fade-up hover-lift magnetic-hover group" style={{animationDelay: '0.8s'}}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg gradient-primary group-hover:animate-radial-pulse transition-all duration-300">
-                <Heart className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold group-hover:text-gradient-shimmer transition-all duration-300">{t.skills.soft.title}</h3>
-            </div>
-            
-            <div className="flex flex-wrap gap-3">
-              {t.skills.soft.items.map((item, idx) => (
-                <span 
-                  key={idx}
-                  className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-up"
-                  style={{animationDelay: `${idx * 0.1}s`}}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+        {/* Category Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-12 md:mt-16 max-w-4xl mx-auto">
+          <div className="glass-card p-4 md:p-6 rounded-lg border-2 border-cyan-500/30 hover:border-cyan-500 transition-all duration-300 card-hover">
+            <h3 className="font-bold text-cyan-600 mb-2 text-base md:text-lg">{t.skills.categories.cloud.title}</h3>
+            <p className="text-xs md:text-sm text-muted-foreground">{t.skills.categories.cloud.description}</p>
+          </div>
+          <div className="glass-card p-4 md:p-6 rounded-lg border-2 border-purple-400/30 hover:border-purple-400 transition-all duration-300 card-hover">
+            <h3 className="font-bold text-purple-600 mb-2 text-base md:text-lg">{t.skills.categories.development.title}</h3>
+            <p className="text-xs md:text-sm text-muted-foreground">{t.skills.categories.development.description}</p>
+          </div>
+          <div className="glass-card p-4 md:p-6 rounded-lg border-2 border-blue-500/30 hover:border-blue-500 transition-all duration-300 card-hover">
+            <h3 className="font-bold text-blue-600 mb-2 text-base md:text-lg">{t.skills.categories.soft.title}</h3>
+            <p className="text-xs md:text-sm text-muted-foreground">{t.skills.categories.soft.description}</p>
           </div>
         </div>
       </div>
