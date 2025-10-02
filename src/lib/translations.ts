@@ -51,7 +51,43 @@ export const translations = {
       period: "2018 – 2023"
     },
     skills: {
-      title: "Skills",
+      title: "Technical Stack",
+      subtitle: "Explore my technical and soft skills • Move the mouse or touch to interact",
+      cloud: [
+        { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM' },
+        { name: 'Linux', description: 'Ubuntu, CentOS, Bash scripting, systemd' },
+        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP' },
+        { name: 'Zabbix', description: 'Infrastructure monitoring, alerts, dashboards' },
+        { name: 'Microsoft 365', description: 'Exchange, Teams, SharePoint, Azure AD' },
+        { name: 'Windows Server', description: 'Active Directory, GPO, IIS, DNS' },
+      ],
+      development: [
+        { name: 'Cybersecurity', description: 'Firewalls, IDS/IPS, Vulnerability Analysis' },
+        { name: 'Virtualization', description: 'VMware, Hyper-V, Docker, Kubernetes' },
+        { name: 'Python', description: 'Automation, scripting, APIs, data processing' },
+        { name: 'PowerShell', description: 'Windows automation, AD management' },
+        { name: 'ITIL', description: 'IT service management, incident management' },
+      ],
+      softSkills: [
+        { name: 'Leadership', description: 'Team management, decision making' },
+        { name: 'Teamwork', description: 'Effective collaboration, communication' },
+        { name: 'Analytical Thinking', description: 'Problem solving, critical analysis' },
+        { name: 'Advanced English', description: 'Technical oral and written communication' }
+      ],
+      categories: {
+        cloud: {
+          title: "☁️ Cloud & Infrastructure",
+          description: "AWS, Linux, Networking, Zabbix, Microsoft 365, Windows Server"
+        },
+        development: {
+          title: "⚙️ Development & Automation",
+          description: "Python, PowerShell, Docker, Virtualization, ITIL"
+        },
+        soft: {
+          title: "🤝 Soft Skills",
+          description: "Leadership, Teamwork, Analytical Thinking, English"
+        }
+      },
       technical: {
         title: "Technical Skills",
         cloud: {
@@ -200,7 +236,43 @@ export const translations = {
       period: "2018 – 2023"
     },
     skills: {
-      title: "Habilidades",
+      title: "Stack Tecnológico",
+      subtitle: "Explora mis competencias técnicas y blandas • Mueve el mouse o toca para interactuar",
+      cloud: [
+        { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM' },
+        { name: 'Linux', description: 'Ubuntu, CentOS, Bash scripting, systemd' },
+        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP' },
+        { name: 'Zabbix', description: 'Monitoreo de infraestructura, alertas, dashboards' },
+        { name: 'Microsoft 365', description: 'Exchange, Teams, SharePoint, Azure AD' },
+        { name: 'Windows Server', description: 'Active Directory, GPO, IIS, DNS' },
+      ],
+      development: [
+        { name: 'Ciberseguridad', description: 'Firewalls, IDS/IPS, Análisis de vulnerabilidades' },
+        { name: 'Virtualización', description: 'VMware, Hyper-V, Docker, Kubernetes' },
+        { name: 'Python', description: 'Automatización, scripting, APIs, data processing' },
+        { name: 'PowerShell', description: 'Automatización Windows, AD management' },
+        { name: 'ITIL', description: 'Gestión de servicios TI, incident management' },
+      ],
+      softSkills: [
+        { name: 'Liderazgo', description: 'Gestión de equipos, toma de decisiones' },
+        { name: 'Trabajo en equipo', description: 'Colaboración efectiva, comunicación' },
+        { name: 'Pensamiento analítico', description: 'Resolución de problemas, análisis crítico' },
+        { name: 'Inglés Avanzado', description: 'Comunicación técnica oral y escrita' }
+      ],
+      categories: {
+        cloud: {
+          title: "☁️ Cloud & Infraestructura",
+          description: "AWS, Linux, Networking, Zabbix, Microsoft 365, Windows Server"
+        },
+        development: {
+          title: "⚙️ Desarrollo & Automatización",
+          description: "Python, PowerShell, Docker, Virtualización, ITIL"
+        },
+        soft: {
+          title: "🤝 Habilidades Blandas",
+          description: "Liderazgo, Trabajo en equipo, Pensamiento analítico, Inglés"
+        }
+      },
       technical: {
         title: "Habilidades Técnicas",
         cloud: {

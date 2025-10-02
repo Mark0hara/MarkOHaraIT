@@ -1,41 +1,49 @@
-// Copia TODO el código del artifact "skills_tag_cloud" aquí
-// El componente ya está optimizado y listo para usar
-
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Shield, Terminal, Network, Box, Activity, Mail, Code, Server, BookOpen, Users, Brain, Globe, Cloud, Database } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const SkillsTagCloud = () => {
-  const containerRef = useRef(null);
-  const [hoveredTag, setHoveredTag] = useState(null);
+const SkillsCloud = () => {
+  const { t } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [hoveredTag, setHoveredTag] = useState<number | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
-  
-  const [skills] = useState([
-    // Cloud & Infraestructura - Cyan
-    { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM', icon: Cloud, color: '#06b6d4' },
-    { name: 'Linux', description: 'Ubuntu, CentOS, Bash scripting, systemd', icon: Terminal, color: '#06b6d4' },
-    { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP', icon: Network, color: '#06b6d4' },
-    { name: 'Zabbix', description: 'Monitoreo de infraestructura, alertas, dashboards', icon: Activity, color: '#06b6d4' },
-    { name: 'Microsoft 365', description: 'Exchange, Teams, SharePoint, Azure AD', icon: Mail, color: '#06b6d4' },
-    { name: 'Windows Server', description: 'Active Directory, GPO, IIS, DNS', icon: Server, color: '#06b6d4' },
-    
-    // Desarrollo & Automatización - Purple
-    { name: 'Ciberseguridad', description: 'Firewalls, IDS/IPS, Análisis de vulnerabilidades', icon: Shield, color: '#c084fc' },
-    { name: 'Virtualización', description: 'VMware, Hyper-V, Docker, Kubernetes', icon: Box, color: '#c084fc' },
-    { name: 'Python', description: 'Automatización, scripting, APIs, data processing', icon: Code, color: '#c084fc' },
-    { name: 'PowerShell', description: 'Automatización Windows, AD management', icon: Terminal, color: '#c084fc' },
-    { name: 'ITIL', description: 'Gestión de servicios TI, incident management', icon: BookOpen, color: '#c084fc' },
-    
-    // Habilidades Blandas - Blue
-    { name: 'Liderazgo', description: 'Gestión de equipos, toma de decisiones', icon: Users, color: '#3b82f6' },
-    { name: 'Trabajo en equipo', description: 'Colaboración efectiva, comunicación', icon: Users, color: '#3b82f6' },
-    { name: 'Pensamiento analítico', description: 'Resolución de problemas, análisis crítico', icon: Brain, color: '#3b82f6' },
-    { name: 'Inglés Avanzado', description: 'Comunicación técnica oral y escrita', icon: Globe, color: '#3b82f6' }
-  ]);
 
-  const [tagPositions, setTagPositions] = useState([]);
+  const iconMap: Record<string, typeof Cloud> = {
+    'AWS': Cloud,
+    'Linux': Terminal,
+    'Networking': Network,
+    'Zabbix': Activity,
+    'Microsoft 365': Mail,
+    'Windows Server': Server,
+    'Cybersecurity': Shield,
+    'Ciberseguridad': Shield,
+    'Virtualization': Box,
+    'Virtualización': Box,
+    'Python': Code,
+    'PowerShell': Terminal,
+    'ITIL': BookOpen,
+    'Leadership': Users,
+    'Liderazgo': Users,
+    'Teamwork': Users,
+    'Trabajo en equipo': Users,
+    'Analytical Thinking': Brain,
+    'Pensamiento analítico': Brain,
+    'Advanced English': Globe,
+    'Inglés Avanzado': Globe
+  };
+
+  const skills = useMemo(() => {
+    const cloudSkills = t.skills.cloud.map((skill: { name: string; description: string }) => ({ ...skill, color: '#06b6d4' }));
+    const devSkills = t.skills.development.map((skill: { name: string; description: string }) => ({ ...skill, color: '#c084fc' }));
+    const softSkills = t.skills.softSkills.map((skill: { name: string; description: string }) => ({ ...skill, color: '#3b82f6' }));
+    
+    return [...cloudSkills, ...devSkills, ...softSkills];
+  }, [t.skills]);
+
+  const [tagPositions, setTagPositions] = useState<Array<{ x: number; y: number; z: number }>>([]);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
-  const animationRef = useRef(null);
-  const touchRef = useRef({ startX: 0, startY: 0, currentX: 0, currentY: 0 });
+  const animationRef = useRef<number | null>(null);
+  const touchRef = useRef({ startX: 0, startY: 0, currentX: 0, currentY: 0, touching: false });
   const targetRotationRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -54,7 +62,7 @@ const SkillsTagCloud = () => {
   }, [skills]);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (containerRef.current && !touchRef.current.touching) {
         const rect = containerRef.current.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -70,13 +78,13 @@ const SkillsTagCloud = () => {
       }
     };
 
-    const handleTouchStart = (e) => {
+    const handleTouchStart = (e: TouchEvent) => {
       touchRef.current.touching = true;
       touchRef.current.startX = e.touches[0].clientX;
       touchRef.current.startY = e.touches[0].clientY;
     };
 
-    const handleTouchMove = (e) => {
+    const handleTouchMove = (e: TouchEvent) => {
       if (touchRef.current.touching) {
         const deltaX = e.touches[0].clientX - touchRef.current.startX;
         const deltaY = e.touches[0].clientY - touchRef.current.startY;
@@ -127,7 +135,7 @@ const SkillsTagCloud = () => {
     };
   }, []);
 
-  const rotatePoint = (x, y, z, angleX, angleY) => {
+  const rotatePoint = (x: number, y: number, z: number, angleX: number, angleY: number) => {
     const cosY = Math.cos(angleY);
     const sinY = Math.sin(angleY);
     const x1 = x * cosY - z * sinY;
@@ -152,31 +160,32 @@ const SkillsTagCloud = () => {
     });
   }, [tagPositions, rotation]);
 
-  const handleTagHover = (e, index) => {
+  const handleTagHover = (e: React.MouseEvent, index: number) => {
     setHoveredTag(index);
     setTooltipPos({ x: e.clientX, y: e.clientY });
   };
 
   return (
-    <div className="w-full min-h-screen bg-transparent flex items-center justify-center p-8 relative">
-      <div className="text-center relative z-10">
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-          Explora mis competencias técnicas y blandas • Mueve el mouse o toca para interactuar
+    <div className="w-full flex items-center justify-center p-4 md:p-8 relative">
+      <div className="text-center relative z-10 w-full">
+        <p className="text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
+          {t.skills.subtitle}
         </p>
         
         <div 
           ref={containerRef}
           className="relative mx-auto touch-none"
           style={{ 
-            width: '600px', 
-            height: '600px',
+            width: '100%',
+            maxWidth: '600px',
+            height: 'min(600px, 80vh)',
             perspective: '1000px'
           }}
         >
           {rotatedPositions.map((rotated, i) => {
             const isHovered = hoveredTag === i;
             const skill = skills[i];
-            const Icon = skill.icon;
+            const Icon = iconMap[skill.name] || Code;
 
             return (
               <div
@@ -197,7 +206,7 @@ const SkillsTagCloud = () => {
                 onMouseLeave={() => setHoveredTag(null)}
               >
                 <div 
-                  className="flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm transition-all duration-200"
+                  className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full backdrop-blur-sm transition-all duration-200"
                   style={{
                     backgroundColor: `${skill.color}15`,
                     border: `2px solid ${skill.color}`,
@@ -213,7 +222,7 @@ const SkillsTagCloud = () => {
                     className="font-semibold whitespace-nowrap transition-all duration-200"
                     style={{ 
                       color: skill.color,
-                      fontSize: `${12 + rotated.scale * 6}px`,
+                      fontSize: `${10 + rotated.scale * 6}px`,
                       fontWeight: isHovered ? 'bold' : 'semibold'
                     }}
                   >
@@ -225,18 +234,18 @@ const SkillsTagCloud = () => {
           })}
         </div>
         
-        <div className="mt-8 flex gap-4 justify-center items-center text-sm text-gray-500 flex-wrap">
+        <div className="mt-8 flex gap-3 md:gap-4 justify-center items-center text-xs md:text-sm text-muted-foreground flex-wrap px-4">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
-            <span>Cloud & Infraestructura</span>
+            <span>{t.skills.categories.cloud.title}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-purple-400"></div>
-            <span>Desarrollo & Automatización</span>
+            <span>{t.skills.categories.development.title}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-            <span>Habilidades Blandas</span>
+            <span>{t.skills.categories.soft.title}</span>
           </div>
         </div>
       </div>
@@ -251,16 +260,15 @@ const SkillsTagCloud = () => {
           }}
         >
           <div 
-            className="px-4 py-3 rounded-lg shadow-xl backdrop-blur-md max-w-xs"
+            className="px-4 py-3 rounded-lg shadow-xl backdrop-blur-md max-w-xs glass-card"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
               border: `2px solid ${skills[hoveredTag].color}`
             }}
           >
             <div className="font-bold mb-1" style={{ color: skills[hoveredTag].color }}>
               {skills[hoveredTag].name}
             </div>
-            <div className="text-sm text-gray-700">
+            <div className="text-sm text-muted-foreground">
               {skills[hoveredTag].description}
             </div>
           </div>
@@ -270,4 +278,4 @@ const SkillsTagCloud = () => {
   );
 };
 
-export default SkillsTagCloud;
+export default SkillsCloud;
