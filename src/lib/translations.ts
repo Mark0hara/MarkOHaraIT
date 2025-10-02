@@ -21,7 +21,7 @@ export const translations = {
       jobs: [
         {
           company: "National Institute of Statistics",
-          companyLogo: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=100&h=100&fit=crop",
+          companyLogo: "https://images.seeklogo.com/logo-png/50/1/censo-de-poblacion-y-vivienda-de-chile-logo-png_seeklogo-502567.png",
           position: "IT Support Manager",
           location: "Santiago, Paseo Bulnes",
           period: "January 2024 – July 2024",
@@ -33,7 +33,7 @@ export const translations = {
         },
         {
           company: "SC Informática",
-          companyLogo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&h=100&fit=crop",
+          companyLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq0jqwe13eOQXgCORzN56MDNiMnURvVHxzMw&s",
           position: "Project Management Engineer and IT Administrator",
           location: "Santiago, Macul",
           period: "May 2023 – December 2023",
@@ -127,22 +127,22 @@ export const translations = {
       items: [
         {
           name: "AWS Certified Cloud Practitioner",
-          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          logo: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png",
           status: "Completed"
         },
         {
-          name: "Advanced English C1 (EF SET)",
-          logo: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=100&h=100&fit=crop",
+          name: "Advanced English C1 (EFE SET)",
+          logo: "https://pbs.twimg.com/profile_images/1846105019013013504/XUA9kTZh_400x400.jpg",
           status: "Completed"
         },
         {
-          name: "Cybersecurity Bootcamp (Digital Talent)",
-          logo: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=100&h=100&fit=crop",
+          name: "Cybersecurity Bootcamp (DigitalTalent/DesafioLatam)",
+          logo: "https://camo.githubusercontent.com/1b92fb3d095f38ef9d281f69d9133fcd8123e901a95e19d7548befa5a00e9f2c/68747470733a2f2f6465736166696f6c6174616d2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032342f30352f63726f707065642d666c617469636f6e2d6c6174616d2e706e67",
           status: "Completed"
         },
         {
           name: "AWS Solutions Architect Associate",
-          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          logo: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png",
           status: "In Progress"
         }
       ]
@@ -230,7 +230,7 @@ export const translations = {
       jobs: [
         {
           company: "Instituto Nacional de Estadísticas",
-          companyLogo: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=100&h=100&fit=crop",
+          companyLogo: "https://images.seeklogo.com/logo-png/50/1/censo-de-poblacion-y-vivienda-de-chile-logo-png_seeklogo-502567.png",
           position: "Gestor Soporte TI",
           location: "Santiago, Paseo Bulnes",
           period: "Enero 2024 – Julio 2024",
@@ -242,7 +242,7 @@ export const translations = {
         },
         {
           company: "SC Informática",
-          companyLogo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&h=100&fit=crop",
+          companyLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq0jqwe13eOQXgCORzN56MDNiMnURvVHxzMw&s",
           position: "Ingeniero en Gestión de Proyectos y Administrador TI",
           location: "Santiago, Macul",
           period: "Mayo 2023 – Diciembre 2023",
@@ -266,24 +266,24 @@ export const translations = {
       subtitle: "Explora mis competencias técnicas y blandas • Mueve el mouse o toca para interactuar",
       cloud: [
         { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM, Cost Optimization' },
-        { name: 'Cybersecurity', description: 'Kaspersky, Firewalls, IDS/IPS, Vulnerability Analysis' },
-        { name: 'IT Administration', description: 'Windows Server, Active Directory, GPO, Office 365' },
-        { name: 'Python', description: 'Automation, scripting, APIs, AWS Boto3' },
+        { name: 'Cybersecurity', description: 'Kaspersky, Firewalls, Wireshark, SIEM' },
+        { name: 'IT Administration', description: 'Windows Server, Active Directory, Office 365' },
+        { name: 'Python', description: 'Automatización, scripting, APIs' },
         { name: 'Linux', description: 'Ubuntu, CentOS, Bash scripting, systemd' },
-        { name: 'Networking', description: 'TCP/IP, VLANs, VPN, DNS, DHCP, Routing' },
+        { name: 'Networking', description: 'SD-WAN, VLANs, VPN, DNS, DHCP, Routing, SNMP' },
       ],
       development: [
-        { name: 'Zabbix', description: 'Infrastructure monitoring, alerts, custom dashboards' },
-        { name: 'Virtualization', description: 'VMware, Hyper-V, Docker, Kubernetes' },
-        { name: 'PowerShell', description: 'Windows automation, Active Directory management' },
-        { name: 'ITIL', description: 'IT service management, incident & change management' },
-        { name: 'Technical Support', description: 'Ticket management, remote support, hardware/software troubleshooting' },
+        { name: 'Zabbix', description: 'Monitoreo de Equipos, Alertas, Dashboards Customs' },
+        { name: 'Virtualization', description: 'VMware, Hyper-V, Docker, Masterización' },
+        { name: 'PowerShell', description: 'Windows Automation, Active Directory management' },
+        { name: 'ITIL', description: 'Administración de Servicios IT, Gestión de incidentes y Cambios' },
+        { name: 'Technical Support', description: 'Gestión de tickets, Asistencia remota, Resolución de problemas de hardware/software.' },
       ],
       softSkills: [
-        { name: 'Liderazgo', description: 'Gestión de equipos, toma de decisiones' },
-        { name: 'Trabajo en equipo', description: 'Colaboración efectiva, comunicación' },
-        { name: 'Pensamiento analítico', description: 'Resolución de problemas, análisis crítico' },
-        { name: 'Inglés Avanzado', description: 'Comunicación técnica oral y escrita' }
+        { name: 'Liderazgo', description: 'Gestión de equipos, Toma de decisiones' },
+        { name: 'Trabajo en equipo', description: 'Colaboración efectiva, Comunicación' },
+        { name: 'Pensamiento analítico', description: 'Resolución de problemas, Análisis crítico' },
+        { name: 'Inglés Avanzado', description: 'Comunicación técnica oral y Escrita' }
       ],
       categories: {
         cloud: {
@@ -292,7 +292,7 @@ export const translations = {
         },
         development: {
           title: "⚙️ Desarrollo & Automatización",
-          description: "Python, PowerShell, Docker, Virtualización, ITIL"
+          description: "ITIL, Python, PowerShell, Docker, Virtualización"
         },
         soft: {
           title: "🤝 Habilidades Blandas",
@@ -336,22 +336,22 @@ export const translations = {
       items: [
         {
           name: "AWS Certified Cloud Practitioner",
-          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          logo: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png",
           status: "Completado"
         },
         {
           name: "Inglés Avanzado C1 (EF SET)",
-          logo: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=100&h=100&fit=crop",
+          logo: "https://pbs.twimg.com/profile_images/1846105019013013504/XUA9kTZh_400x400.jpg",
           status: "Completado"
         },
         {
           name: "Bootcamp Ciberseguridad (Talento Digital)",
-          logo: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=100&h=100&fit=crop",
+          logo: "https://camo.githubusercontent.com/1b92fb3d095f38ef9d281f69d9133fcd8123e901a95e19d7548befa5a00e9f2c/68747470733a2f2f6465736166696f6c6174616d2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032342f30352f63726f707065642d666c617469636f6e2d6c6174616d2e706e67",
           status: "Completado"
         },
         {
           name: "AWS Solutions Architect Associate",
-          logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=100&h=100&fit=crop",
+          logo: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png",
           status: "En Progreso"
         }
       ]
