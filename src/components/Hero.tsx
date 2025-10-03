@@ -2,10 +2,18 @@ import React, { useEffect, useRef } from 'react';
 import { MapPin, Mail, Linkedin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTypewriter } from '@/hooks/useTypewriter';
+import { useParallax } from '@/hooks/useParallax';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
   const linesRef = useRef<HTMLDivElement>(null);
+  const { displayedText, isComplete } = useTypewriter({ 
+    text: t.hero.subtitle, 
+    speed: 80, 
+    delay: 1000 
+  });
+  const parallaxOffset = useParallax(0.3);
 
   useEffect(() => {
     const createLine = (delay: number, angle: number, length: number, color: string) => {
@@ -46,9 +54,11 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       
-      {/* Enhanced animated background */}
-      <div className="absolute inset-0 background-pattern opacity-70" />
-      <div className="absolute inset-0 gradient-hero animate-gradient" />
+      {/* Enhanced animated background with parallax */}
+      <div 
+        className="absolute inset-0 gradient-hero animate-gradient" 
+        style={{ transform: `translateY(${parallaxOffset}px)` }}
+      />
       
       {/* Floating elements with enhanced effects */}
       <div className="absolute inset-0 opacity-40 dark:opacity-30">
@@ -63,15 +73,15 @@ const Hero: React.FC = () => {
 
       
       <div className="container mx-auto px-4 relative z-30">
-        <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up opacity-0" style={{ animation: 'fade-up 0.8s ease-out 0.2s forwards' }}>
             <span className="text-gradient-shimmer">
               {t.hero.title}
             </span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 animate-fade-up" style={{animationDelay: '0.2s'}}>
-            {t.hero.subtitle}
+          <h2 className={`text-xl md:text-2xl text-muted-foreground mb-6 min-h-[2rem] ${!isComplete ? 'typewriter-cursor' : ''}`}>
+            {displayedText}
           </h2>
 
           {/* Contact Info */}
@@ -104,12 +114,12 @@ const Hero: React.FC = () => {
           <div className="flex justify-center animate-fade-up" style={{animationDelay: '0.8s'}}>
             <Button 
               size="lg" 
-              className="gradient-primary hover-glow group relative overflow-hidden"
+              className="gradient-primary hover-glow btn-shine ripple-effect arrow-hover group relative overflow-hidden"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <span className="relative z-10 flex items-center">
                 {t.hero.contactMe}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-4 h-4 ml-2 arrow-icon transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Button>

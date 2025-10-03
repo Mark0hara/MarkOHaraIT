@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'glass-card shadow-2xl backdrop-blur-xl' : 'bg-background/60 backdrop-blur-sm'
+      isScrolled ? 'glass-card shadow-2xl backdrop-blur-xl navbar-slide-down' : 'bg-background/60 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -46,11 +46,10 @@ const Navbar: React.FC = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 relative group animate-fade-up"
+                className="text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 relative underline-animate animate-fade-up"
                 style={{animationDelay: `${idx * 0.1}s`}}
               >
                 {item.label}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300" />
               </a>
             ))}
             <div className="flex items-center gap-2">

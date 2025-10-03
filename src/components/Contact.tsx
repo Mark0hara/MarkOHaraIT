@@ -116,55 +116,66 @@ const Contact: React.FC = () => {
             ref={formAnimation.ref as React.RefObject<HTMLDivElement>}
             className={`glass-card rounded-lg p-6 md:p-8 card-hover scroll-scale ${formAnimation.isVisible ? 'visible' : ''}`}
           >
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <Input
-                type="text"
-                name="name"
-                placeholder={t.contact.form.name}
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="bg-background/50"
-              />
-              <Input
-                type="email"
-                name="email"
-                placeholder={t.contact.form.email}
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="bg-background/50"
-              />
-              <Input
-                type="text"
-                name="subject"
-                placeholder={t.contact.form.subject}
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="bg-background/50"
-              />
-              <Textarea
-                name="message"
-                placeholder={t.contact.form.message}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                className="bg-background/50"
-              />
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="relative">
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder={t.contact.form.name}
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="bg-background/50 focus:border-glow-animate transition-all duration-300"
+                />
+              </div>
+              <div className="relative">
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder={t.contact.form.email}
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="bg-background/50 focus:border-glow-animate transition-all duration-300"
+                />
+              </div>
+              <div className="relative">
+                <Input
+                  type="text"
+                  name="subject"
+                  placeholder={t.contact.form.subject}
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="bg-background/50 focus:border-glow-animate transition-all duration-300"
+                />
+              </div>
+              <div className="relative">
+                <Textarea
+                  name="message"
+                  placeholder={t.contact.form.message}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="bg-background/50 focus:border-glow-animate transition-all duration-300"
+                />
+              </div>
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full gradient-primary btn-hover-effect transition-all duration-300 hover:-translate-y-1"
+                className="w-full gradient-primary btn-hover-effect btn-shine ripple-effect transition-all duration-300 hover:-translate-y-1"
               >
                 {isSubmitting ? (
-                  t.contact.form.sending
+                  <span className="flex items-center gap-2">
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    {t.contact.form.sending}
+                  </span>
                 ) : (
-                  <>
-                    <Send className="w-4 h-4 mr-2" />
+                  <span className="flex items-center gap-2">
+                    <Send className="w-4 h-4" />
                     {t.contact.form.send}
-                  </>
+                  </span>
                 )}
               </Button>
             </form>
@@ -177,9 +188,9 @@ const Contact: React.FC = () => {
               return (
                 <div 
                   ref={emailAnimation.ref as React.RefObject<HTMLDivElement>}
-                  className={`glass-card rounded-lg p-6 card-hover scroll-scale ${emailAnimation.isVisible ? 'visible' : ''}`}
+                  className={`glass-card rounded-lg p-6 card-hover overlay-gradient scroll-scale ${emailAnimation.isVisible ? 'visible' : ''}`}
                 >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 stagger-children">
                 <div className="p-3 rounded-lg gradient-primary">
                   <Mail className="w-6 h-6 text-primary-foreground" />
                 </div>
@@ -187,7 +198,7 @@ const Contact: React.FC = () => {
                   <p className="text-sm text-muted-foreground">Email</p>
                   <a 
                     href="mailto:marco.antonio.jc2000@gmail.com" 
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-foreground hover:text-primary transition-colors underline-animate"
                     onClick={() => handleSocialClick('email', 'marco.antonio.jc2000@gmail.com')}
                   >
                     marco.antonio.jc2000@gmail.com
@@ -203,10 +214,10 @@ const Contact: React.FC = () => {
               return (
                 <div 
                   ref={linkedinAnimation.ref as React.RefObject<HTMLDivElement>}
-                  className={`glass-card rounded-lg p-6 card-hover scroll-scale ${linkedinAnimation.isVisible ? 'visible' : ''}`}
+                  className={`glass-card rounded-lg p-6 card-hover overlay-gradient scroll-scale ${linkedinAnimation.isVisible ? 'visible' : ''}`}
                   style={{transitionDelay: '0.1s'}}
                 >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 stagger-children">
                 <div className="p-3 rounded-lg gradient-primary">
                   <Linkedin className="w-6 h-6 text-primary-foreground" />
                 </div>
@@ -216,7 +227,7 @@ const Contact: React.FC = () => {
                      href="https://linkedin.com/in/markoharasba580" 
                      target="_blank" 
                      rel="noopener noreferrer"
-                     className="text-foreground hover:text-primary transition-colors"
+                     className="text-foreground hover:text-primary transition-colors underline-animate"
                      onClick={() => handleSocialClick('linkedin', 'https://linkedin.com/in/markoharasba580')}
                    >
                      /in/Mark_O'Hara
@@ -232,10 +243,10 @@ const Contact: React.FC = () => {
               return (
                 <div 
                   ref={githubAnimation.ref as React.RefObject<HTMLDivElement>}
-                  className={`glass-card rounded-lg p-6 card-hover scroll-scale ${githubAnimation.isVisible ? 'visible' : ''}`}
+                  className={`glass-card rounded-lg p-6 card-hover overlay-gradient scroll-scale ${githubAnimation.isVisible ? 'visible' : ''}`}
                   style={{transitionDelay: '0.2s'}}
                 >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 stagger-children">
                 <div className="p-3 rounded-lg gradient-primary">
                   <Github className="w-6 h-6 text-primary-foreground" />
                 </div>
@@ -245,7 +256,7 @@ const Contact: React.FC = () => {
                      href="https://github.com/Mark0hara/MarkOHaraIT" 
                      target="_blank" 
                      rel="noopener noreferrer"
-                     className="text-foreground hover:text-primary transition-colors"
+                     className="text-foreground hover:text-primary transition-colors underline-animate"
                      onClick={() => handleSocialClick('github', 'https://github.com/Mark0hara/MarkOHaraIT')}
                    >
                      MarkOHaraIT

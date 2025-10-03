@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -79,7 +79,7 @@ const Portfolio: React.FC = () => {
               <Card 
                 key={index}
                 ref={projectAnimation.ref as React.RefObject<HTMLDivElement>}
-                className={`glass-card card-hover group scroll-scale ${projectAnimation.isVisible ? 'visible' : ''}`}
+                className={`glass-card card-hover overlay-gradient group scroll-scale ${projectAnimation.isVisible ? 'visible' : ''}`}
                 style={{ transitionDelay: `${index * 0.15}s` }}
               >
               <CardHeader>
@@ -104,7 +104,7 @@ const Portfolio: React.FC = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <div 
                         key={techIndex}
-                        className="flex items-center gap-1 px-3 py-1 bg-secondary/50 rounded-full text-xs hover:bg-secondary transition-colors duration-300"
+                        className="flex items-center gap-1 px-3 py-1 bg-secondary/50 rounded-full text-xs hover:bg-secondary transition-all duration-300 pop-hover border-glow-animate"
                       >
                         <span>{getTechnologyIcon(tech)}</span>
                         <span>{tech}</span>
@@ -118,16 +118,17 @@ const Portfolio: React.FC = () => {
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="flex-1 btn-hover-effect group/btn transition-all duration-300 hover:-translate-y-1"
+                    className="flex-1 btn-hover-effect btn-shine arrow-hover group/btn transition-all duration-300 hover:-translate-y-1"
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
                     View Code
+                    <ArrowRight className="w-4 h-4 ml-auto arrow-icon" />
                   </Button>
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className="btn-hover-effect transition-all duration-300 hover:-translate-y-1"
+                    className="btn-hover-effect ripple-effect transition-all duration-300 hover:-translate-y-1"
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <ExternalLink className="w-4 h-4" />
