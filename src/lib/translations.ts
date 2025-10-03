@@ -54,7 +54,7 @@ export const translations = {
     },
     skills: {
       title: "Technical Stack",
-      subtitle: "Explore my technical and soft skills • Move the mouse or touch to interact",
+      subtitle: "Explore my technical and soft skills 🌟 Move the mouse or touch to interact",
       cloud: [
         { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM, Cost Optimization' },
         { name: 'Cybersecurity', description: 'Kaspersky, Firewalls, IDS/IPS, Vulnerability Analysis' },
@@ -78,15 +78,15 @@ export const translations = {
       ],
       categories: {
         cloud: {
-          title: "☁️ Cloud & Infrastructure",
+          title: "Cloud & Infrastructure",
           description: "AWS, Linux, Networking, Zabbix, Microsoft 365, Windows Server"
         },
         development: {
-          title: "⚙️ Development & Automation",
+          title: "Development & Automation",
           description: "Python, PowerShell, Docker, Virtualization, ITIL"
         },
         soft: {
-          title: "🤝 Soft Skills",
+          title: "Soft Skills",
           description: "Leadership, Teamwork, Analytical Thinking, English"
         }
       },
@@ -263,7 +263,7 @@ export const translations = {
     },
     skills: {
       title: "Stack Tecnológico",
-      subtitle: "Explora mis competencias técnicas y blandas • Mueve el mouse o toca para interactuar",
+      subtitle: "Explora mis competencias técnicas y blandas 🌟 Mueve el mouse o toca para interactuar",
       cloud: [
         { name: 'AWS', description: 'EC2, S3, Lambda, CloudWatch, IAM, Cost Optimization' },
         { name: 'Cybersecurity', description: 'Kaspersky, Firewalls, Wireshark, SIEM' },
@@ -287,15 +287,15 @@ export const translations = {
       ],
       categories: {
         cloud: {
-          title: "☁️ Cloud & Infraestructura",
+          title: "Cloud & Infraestructura",
           description: "AWS, Linux, Networking, Zabbix, Microsoft 365, Windows Server"
         },
         development: {
-          title: "⚙️ Desarrollo & Automatización",
+          title: "Desarrollo & Automatización",
           description: "ITIL, Python, PowerShell, Docker, Virtualización"
         },
         soft: {
-          title: "🤝 Habilidades Blandas",
+          title: "Habilidades Blandas",
           description: "Liderazgo, Trabajo en equipo, Pensamiento analítico, Inglés"
         }
       },
