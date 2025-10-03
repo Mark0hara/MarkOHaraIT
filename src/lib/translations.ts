@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       title: "MARCO ANTONIO JARA CUEVAS",
-      subtitle: "Telecommunications and Network Engineer",
+      subtitle: "Cloud & Network Engineer",
       location: "Santiago - Chile",
       description: "Telecommunications and Network Engineer with experience in IT support, cloud platform administration, and cybersecurity projects. I have managed solutions on AWS and Microsoft, optimizing resources and strengthening IT security.",
       downloadCV: "Download CV",
@@ -219,7 +219,7 @@ export const translations = {
     },
     hero: {
       title: "MARCO ANTONIO JARA CUEVAS",
-      subtitle: "Ingeniero en Telecomunicaciones y Redes",
+      subtitle: "Ingeniero en Cloud y Redes",
       location: "El Monte – Talagante",
       description: "Ingeniero en Telecomunicaciones y Redes con experiencia en soporte TI, administración de plataformas cloud y proyectos de ciberseguridad. He gestionado soluciones en AWS y Microsoft, optimizando recursos y fortaleciendo la seguridad informática.",
       downloadCV: "Descargar CV",

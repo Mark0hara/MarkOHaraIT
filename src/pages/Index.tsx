@@ -10,15 +10,19 @@ import Contact from '@/components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
-      <Navbar />
-      <Hero />
-      <Experience />
-      <Education />
-      <Skills />
-      <Certifications />
-      <Portfolio />
-      <Contact />
+    <div className="min-h-screen bg-background transition-colors duration-300 relative">
+      {/* Unified star background for entire page */}
+      <div className="fixed inset-0 background-pattern opacity-40 dark:opacity-80 pointer-events-none" />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <Experience />
+        <Education />
+        <Skills />
+        <Certifications />
+        <Portfolio />
+        <Contact />
+      </div>
     </div>
   );
 };

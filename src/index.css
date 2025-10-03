@@ -105,6 +105,20 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+  
+  /* Smooth theme transition for all elements */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s;
+  }
+  
+  /* Exclude specific animations from theme transition */
+  *[class*="animate-"],
+  *[style*="animation"] {
+    transition: none !important;
   }
   
   /* Custom animations */
@@ -346,12 +360,12 @@ All colors MUST be HSL.
   
   .dark .background-pattern {
     background-image: 
-      radial-gradient(circle at 2px 2px, hsl(var(--primary) / 0.4) 1.5px, transparent 0),
-      radial-gradient(circle at 50px 30px, hsl(var(--accent) / 0.3) 1.5px, transparent 0),
-      radial-gradient(circle at 120px 80px, hsl(var(--primary) / 0.2) 1.5px, transparent 0),
-      radial-gradient(circle at 200px 150px, hsl(var(--accent) / 0.25) 1.5px, transparent 0),
-      radial-gradient(circle at 300px 50px, hsl(var(--primary) / 0.3) 1.5px, transparent 0),
-      radial-gradient(circle at 400px 200px, hsl(var(--accent) / 0.2) 1.5px, transparent 0);
+      radial-gradient(circle at 2px 2px, hsl(var(--primary) / 0.8) 2px, transparent 0),
+      radial-gradient(circle at 50px 30px, hsl(var(--accent) / 0.7) 2px, transparent 0),
+      radial-gradient(circle at 120px 80px, hsl(var(--primary) / 0.6) 2px, transparent 0),
+      radial-gradient(circle at 200px 150px, hsl(var(--accent) / 0.65) 2px, transparent 0),
+      radial-gradient(circle at 300px 50px, hsl(var(--primary) / 0.7) 2px, transparent 0),
+      radial-gradient(circle at 400px 200px, hsl(var(--accent) / 0.6) 2px, transparent 0);
   }
   
   @keyframes star-drift {

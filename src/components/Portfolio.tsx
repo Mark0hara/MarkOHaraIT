@@ -45,7 +45,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 px-4 relative overflow-hidden">
+    <section id="portfolios" className="py-20 px-4 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 background-pattern opacity-30" />
       <div className="absolute inset-0 gradient-hero animate-gradient" />

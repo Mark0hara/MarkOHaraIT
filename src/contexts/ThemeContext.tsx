@@ -17,12 +17,23 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   useEffect(() => {
     const root = document.documentElement;
+    
+    // Add transition class before changing theme
+    root.style.setProperty('transition', 'background-color 0.5s ease-in-out, color 0.5s ease-in-out');
+    
     if (theme === 'dark') {
       root.classList.add('dark');
     } else {
       root.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
+    
+    // Remove transition after animation completes
+    const timer = setTimeout(() => {
+      root.style.removeProperty('transition');
+    }, 500);
+    
+    return () => clearTimeout(timer);
   }, [theme]);
 
   const toggleTheme = () => {
