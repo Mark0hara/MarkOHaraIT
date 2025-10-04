@@ -106,12 +106,6 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    cursor: none;
-  }
-  
-  /* Hide default cursor on interactive elements */
-  a, button, [role="button"], input, textarea, select {
-    cursor: none !important;
   }
   
   /* Smooth theme transition for all elements */
@@ -134,14 +128,6 @@ All colors MUST be HSL.
   }
   
   @media (prefers-reduced-motion: reduce) {
-    body {
-      cursor: auto;
-    }
-    
-    a, button, [role="button"], input, textarea, select {
-      cursor: pointer !important;
-    }
-    
     * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
@@ -280,7 +266,7 @@ All colors MUST be HSL.
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.33%);
+    transform: translateX(-50%);
   }
 }
 

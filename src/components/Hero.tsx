@@ -80,13 +80,13 @@ const Hero: React.FC = () => {
             </span>
           </h1>
           
-          <h2 className={`text-xl md:text-2xl text-muted-foreground mb-6 min-h-[2rem] ${!isComplete ? 'typewriter-cursor' : ''}`}>
+          <h2 className={`text-xl md:text-2xl text-foreground dark:text-cyan-100 mb-6 min-h-[2rem] ${!isComplete ? 'typewriter-cursor' : ''}`}>
             {displayedText}
           </h2>
 
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm md:text-base animate-fade-up" style={{animationDelay: '0.4s'}}>
-            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 hover-lift magnetic-hover">
+            <a href="#" className="flex items-center gap-2 text-foreground dark:text-white hover:text-primary transition-all duration-300 hover-lift magnetic-hover">
               <MapPin className="w-4 h-4" />
               {t.hero.location}
             </a>
@@ -94,19 +94,19 @@ const Hero: React.FC = () => {
               href="https://linkedin.com/in/markoharasba580" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 hover-lift magnetic-hover"
+              className="flex items-center gap-2 text-foreground dark:text-white hover:text-primary transition-all duration-300 hover-lift magnetic-hover"
             >
               <Linkedin className="w-4 h-4" />
               /in/Mark_O'Hara
             </a>
-            <a href="mailto:marco.antonio.jc2000@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 hover-lift magnetic-hover">
+            <a href="mailto:marco.antonio.jc2000@gmail.com" className="flex items-center gap-2 text-foreground dark:text-white hover:text-primary transition-all duration-300 hover-lift magnetic-hover">
               <Mail className="w-4 h-4" />
               marco.antonio.jc2000@gmail.com
             </a>
           </div>
 
           {/* Description */}
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-up" style={{animationDelay: '0.6s'}}>
+          <p className="text-foreground dark:text-gray-100 max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-up" style={{animationDelay: '0.6s'}}>
             {t.hero.description}
           </p>
 

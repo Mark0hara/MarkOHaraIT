@@ -7,7 +7,6 @@ import Skills from '@/components/Skills';
 import Certifications from '@/components/Certifications';
 import Portfolio from '@/components/Portfolio';
 import Contact from '@/components/Contact';
-import CustomCursor from '@/components/CustomCursor';
 import ScrollProgress from '@/components/ScrollProgress';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import { useKonamiCode } from '@/hooks/useKonamiCode';
@@ -44,14 +43,11 @@ const Index = () => {
   });
   return (
     <div className="min-h-screen bg-background transition-colors duration-300 relative">
-      {/* Custom cursor */}
-      <CustomCursor />
-      
       {/* Scroll progress indicator */}
       <ScrollProgress />
       
       {/* Unified star background for entire page */}
-      <div className="fixed inset-0 background-pattern opacity-40 dark:opacity-80 pointer-events-none" />
+      <div className="fixed inset-0 background-pattern opacity-30 dark:opacity-60 pointer-events-none" />
       
       {/* Particles background */}
       <ParticlesBackground />

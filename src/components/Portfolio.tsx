@@ -27,28 +27,27 @@ const Portfolio: React.FC = () => {
     }
   };
 
-  const getTechnologyIcon = (tech: string) => {
-    const icons: { [key: string]: string } = {
-      'Python': '🐍',
-      'AWS': '☁️',
-      'AWS CloudWatch': '☁️',
-      'Zabbix': '📊',
-      'Linux': '🐧',
-      'GNS3': '🌐',
-      'Networking': '🔗',
-      'Redes': '🔗',
-      'Cisco': '🔧',
-      'Boto3': '⚙️',
+  const getTechnologyImage = (tech: string) => {
+    const images: { [key: string]: string } = {
+      'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+      'AWS CloudWatch': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+      'Zabbix': 'https://assets.zabbix.com/img/logo/zabbix_logo_500x131.png',
+      'Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+      'GNS3': '', // User will add later
+      'Networking': '', // User will add later
+      'Redes': '', // User will add later
+      'Cisco': '', // User will add later
+      'Boto3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
     };
     
-    return icons[tech] || '⚙️';
+    return images[tech] || '';
   };
 
   return (
     <section id="portfolios" className="py-20 px-4 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 background-pattern opacity-30" />
-      <div className="absolute inset-0 gradient-hero animate-gradient" />
+      {/* Smooth gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Hero Section */}
@@ -100,16 +99,29 @@ const Portfolio: React.FC = () => {
                 {/* Technologies */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold mb-3 text-foreground">Technologies Used:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <div 
-                        key={techIndex}
-                        className="flex items-center gap-1 px-3 py-1 bg-secondary/50 rounded-full text-xs hover:bg-secondary transition-all duration-300 pop-hover border-glow-animate"
-                      >
-                        <span>{getTechnologyIcon(tech)}</span>
-                        <span>{tech}</span>
-                      </div>
-                    ))}
+                  <div className="flex flex-wrap gap-3">
+                    {project.technologies.map((tech, techIndex) => {
+                      const techImage = getTechnologyImage(tech);
+                      return (
+                        <div 
+                          key={techIndex}
+                          className="flex items-center gap-2 px-3 py-2 bg-secondary/50 rounded-lg hover:bg-secondary transition-all duration-300 pop-hover border-glow-animate"
+                        >
+                          {techImage ? (
+                            <img 
+                              src={techImage} 
+                              alt={tech} 
+                              className="w-5 h-5 object-contain"
+                              onError={(e) => {
+                                // Fallback if image fails to load
+                                e.currentTarget.style.display = 'none';
+                              }}
+                            />
+                          ) : null}
+                          <span className="text-xs font-medium">{tech}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
                 

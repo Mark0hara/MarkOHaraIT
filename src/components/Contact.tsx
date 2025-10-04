@@ -84,12 +84,11 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 px-4 relative overflow-hidden">
-      {/* Animated star background */}
-      <div className="absolute inset-0 background-pattern" />
-      <div className="absolute inset-0 gradient-hero animate-gradient" />
-      <div className="absolute inset-0 opacity-40 dark:opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-floating" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-floating" style={{animationDelay: '3s'}} />
+      {/* Smooth gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background to-background" />
+      <div className="absolute inset-0 opacity-20 dark:opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-floating" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-floating" style={{animationDelay: '3s'}} />
       </div>
       
       {/* Animated Waves */}
