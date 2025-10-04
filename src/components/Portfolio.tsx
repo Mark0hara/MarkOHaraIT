@@ -32,12 +32,14 @@ const Portfolio: React.FC = () => {
       'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
       'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
       'AWS CloudWatch': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+      'AWS Cloud': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
       'Zabbix': 'https://assets.zabbix.com/img/logo/zabbix_logo_500x131.png',
       'Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
-      'GNS3': '', // User will add later
-      'Networking': '', // User will add later
-      'Redes': '', // User will add later
-      'Cisco': '', // User will add later
+      'GNS3': 'https://www.gns3.com/assets/custom/gns3/images/logo-colour.png',
+      'Networking': 'https://cdn-icons-png.flaticon.com/512/1183/1183621.png',
+      'Redes': 'https://cdn-icons-png.flaticon.com/512/1183/1183621.png',
+      'Cisco': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg',
+      'OSPF': 'https://cdn-icons-png.flaticon.com/512/1183/1183621.png',
       'Boto3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
     };
     
@@ -46,8 +48,6 @@ const Portfolio: React.FC = () => {
 
   return (
     <section id="portfolios" className="py-20 px-4 relative overflow-hidden">
-      {/* Smooth gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Hero Section */}

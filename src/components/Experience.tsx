@@ -8,7 +8,7 @@ const Experience: React.FC = () => {
   const titleAnimation = useScrollAnimation();
 
   return (
-    <section id="experience" className="py-20 bg-secondary/20">
+    <section id="experience" className="py-20">
       <div className="container mx-auto px-4">
         <h2 
           ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}

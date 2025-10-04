@@ -9,7 +9,7 @@ const Education: React.FC = () => {
   const cardAnimation = useScrollAnimation();
 
   return (
-    <section className="py-20 bg-secondary/20">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 
           ref={titleAnimation.ref as React.RefObject<HTMLHeadingElement>}

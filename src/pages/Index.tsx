@@ -42,7 +42,10 @@ const Index = () => {
     }
   });
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300 relative">
+    <div className="min-h-screen relative">
+      {/* Unified gradient background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-background via-background to-secondary/10 dark:from-background dark:via-background dark:to-primary/5 transition-colors duration-500" />
+      
       {/* Scroll progress indicator */}
       <ScrollProgress />
       
