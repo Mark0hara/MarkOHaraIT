@@ -10,7 +10,7 @@
 
 ---
 
-## 👨🏻‍💻 Technologies and tools 
+##  Technologies and tools 
 <table align="center">
   <tr>
     <!-- Primera fila -->
