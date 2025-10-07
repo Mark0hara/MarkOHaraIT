@@ -15,7 +15,7 @@
   <tr>
     <!-- Primera fila -->
     <td align="center" width="50%">
-      <h3>🔒 Cybersecurity</h3>
+      <h3>👨🏻‍💻 Cybersecurity</h3>
       <p>
         <img src="https://img.icons8.com/ios7/512/FFFFFF/wireshark.png" alt="Wireshark" width="45" height="45"/>
         <img src="https://cdn-icons-png.flaticon.com/512/10349/10349752.png" alt="SIEM" width="45" height="45"/>
