@@ -41,6 +41,11 @@ const Portfolio: React.FC = () => {
       'Cisco': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg',
       'OSPF': 'https://cdn-icons-png.flaticon.com/512/1183/1183621.png',
       'Boto3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+      'Vercel': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg',
+      'Lovable': 'https://lovable.app/favicon.ico',
     };
     
     return images[tech] || '';
