@@ -21,7 +21,7 @@ export const translations = {
       jobs: [
         {
           company: "National Institute of Statistics",
-          companyLogo: "https://images.seeklogo.com/logo-png/50/1/censo-de-poblacion-y-vivienda-de-chile-logo-png_seeklogo-502567.png",
+          companyLogo: "https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/ine_ver_1.png",
           position: "IT Support Manager",
           location: "Santiago, Paseo Bulnes",
           period: "January 2024 – July 2024",
