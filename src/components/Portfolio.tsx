@@ -103,7 +103,7 @@ const Portfolio: React.FC = () => {
                 
                 {/* Technologies */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold mb-3 text-foreground">Technologies Used:</h4>
+                  <h4 className="text-sm font-semibold mb-3 text-foreground">{t.portfolios.technologiesUsed}</h4>
                   <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech, techIndex) => {
                       const techImage = getTechnologyImage(tech);
@@ -139,7 +139,7 @@ const Portfolio: React.FC = () => {
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
-                    View Code
+                    {t.portfolios.viewCode}
                     <ArrowRight className="w-4 h-4 ml-auto arrow-icon" />
                   </Button>
                   <Button 

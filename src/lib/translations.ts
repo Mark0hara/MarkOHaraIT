@@ -171,6 +171,8 @@ export const translations = {
     portfolios: {
       title: "My Projects",
       subtitle: "A collection of projects that showcase my skills and experience in telecommunications, network engineering, and cybersecurity.",
+      technologiesUsed: "Technologies Used:",
+      viewCode: "View Code",
       cta: {
         title: "Let's Build Something Together",
         subtitle: "I'm always open to collaborating on interesting projects and exploring new opportunities.",
@@ -230,7 +232,7 @@ export const translations = {
       jobs: [
         {
           company: "Instituto Nacional de Estadísticas",
-          companyLogo: "https://images.seeklogo.com/logo-png/50/1/censo-de-poblacion-y-vivienda-de-chile-logo-png_seeklogo-502567.png",
+          companyLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXvYZKGVGmZVz6pYqK8xEVCqJVqYqYqYqYqQ&s",
           position: "Gestor Soporte TI",
           location: "Santiago, Paseo Bulnes",
           period: "Enero 2024 – Julio 2024",
@@ -380,6 +382,8 @@ export const translations = {
     portfolios: {
       title: "Mis Proyectos",
       subtitle: "Una colección de proyectos que demuestran mis habilidades y experiencia en telecomunicaciones, ingeniería de redes y ciberseguridad.",
+      technologiesUsed: "Tecnologías Utilizadas:",
+      viewCode: "Ver Código",
       cta: {
         title: "Construyamos Algo Juntos",
         subtitle: "Siempre estoy abierto a colaborar en proyectos interesantes y explorar nuevas oportunidades.",
