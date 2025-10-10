@@ -203,7 +203,7 @@ export const translations = {
         {
           title: "Portfolio-Tuto",
           description: "Landing page with contact form connected to Firebase Firestore, deployed on Vercel/Lovable. A practical guide to learn how to integrate Firebase and deploy a modern website without a backend.",
-          technologies: ["React", "TypeScript", "Firebase", "Vercel", "Lovable"],
+          technologies: ["React", "TypeScript", "Firebase", "Vercel"],
           githubUrl: "https://github.com/Mark0hara/Portfolio-Tuto",
           status: "Completed"
         }
@@ -414,7 +414,7 @@ export const translations = {
         {
           title: "Portfolio-Tuto",
           description: "Landing page con formulario de contacto conectado a Firebase Firestore, desplegada en Vercel/Lovable. Una guía práctica para aprender a integrar Firebase y desplegar una web moderna sin backend.",
-          technologies: ["React", "TypeScript", "Firebase", "Vercel", "Lovable"],
+          technologies: ["React", "TypeScript", "Firebase", "Vercel"],
           githubUrl: "https://github.com/Mark0hara/Portfolio-Tuto",
           status: "Completado"
         }
