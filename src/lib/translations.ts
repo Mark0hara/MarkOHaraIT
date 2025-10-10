@@ -21,7 +21,7 @@ export const translations = {
       jobs: [
         {
           company: "National Institute of Statistics",
-          companyLogo: "https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/ine_ver_1.png",
+          companyLogo: "censo",
           position: "IT Support Manager",
           location: "Santiago, Paseo Bulnes",
           period: "January 2024 – July 2024",
@@ -232,7 +232,7 @@ export const translations = {
       jobs: [
         {
           company: "Instituto Nacional de Estadísticas",
-          companyLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXvYZKGVGmZVz6pYqK8xEVCqJVqYqYqYqYqQ&s",
+          companyLogo: "censo",
           position: "Gestor Soporte TI",
           location: "Santiago, Paseo Bulnes",
           period: "Enero 2024 – Julio 2024",

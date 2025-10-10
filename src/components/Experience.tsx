@@ -2,10 +2,16 @@ import React from 'react';
 import { Briefcase, MapPin, Calendar, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import censoLogo from '@/lib/censo.jpg';
 
 const Experience: React.FC = () => {
   const { t } = useLanguage();
   const titleAnimation = useScrollAnimation();
+
+  const getCompanyLogo = (logo: string) => {
+    if (logo === 'censo') return censoLogo;
+    return logo;
+  };
 
   return (
     <section id="experience" className="py-20">
@@ -33,11 +39,11 @@ const Experience: React.FC = () => {
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
                 <div className="flex items-start gap-4 flex-1">
                   {job.companyLogo && (
-                    <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 border-2 border-primary/20">
+                    <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 border-2 border-primary/20 bg-white">
                       <img 
-                        src={job.companyLogo} 
+                        src={getCompanyLogo(job.companyLogo)} 
                         alt={`${job.company} logo`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-1"
                       />
                     </div>
                   )}
